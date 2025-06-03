@@ -45,3 +45,11 @@ Thumbs.db
 package.json
 package-lock.json
 
+#tsconfig 
+tsconfig.json
+tsconfig.spec.json
+tsconfig.app.json
+
+#angular
+angular.json
+.editorconfig
