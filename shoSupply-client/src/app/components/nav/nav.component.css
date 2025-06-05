@@ -1,0 +1,13 @@
+.nav-button {
+  display: block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-radius: 0.125rem;
+  color: #111827;
+}
+
+.nav-button:hover {
+  background-color: #f3f4f6;
+}
