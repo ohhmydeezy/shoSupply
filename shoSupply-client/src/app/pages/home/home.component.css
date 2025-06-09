@@ -1,0 +1,19 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: white;
+  }
+  
