@@ -1,19 +1,28 @@
+.ticker-wrapper-outer {
+    width: 101vw;
+    position: relative;
+}
+
+
 .skillTicker {
     font-size: 40px;
     padding-block: 8px;
     display: flex;
+    overflow: hidden;
     align-items: center;
     border-top: 10px solid purple;
     border-bottom: 10px solid purple;
-    overflow: hidden;
     user-select: none;
     background: white;
-    transform: rotate(-5.7deg) translateX(-0.5vw);
-    width: 120vw;
+    transform: rotate(-5.7deg) scaleX(1.05);
+    width: 100vw;
+    margin-left: -2.6vw;
+
+
   }
   
   .label {
-    padding-left: 10px;
+    padding-left: 120px;
     font-weight: bold;
     margin-right: 2rem;
     white-space: nowrap;

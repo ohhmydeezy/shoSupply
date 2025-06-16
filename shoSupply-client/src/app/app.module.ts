@@ -9,6 +9,7 @@ import { TeachersComponent } from './pages/teachers/teachers.component';
 import { WorkshopsComponent } from './pages/workshops/workshops.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { SliderComponent } from './components/slider/slider.component';
     ContactComponent,
     SliderComponent
   ],
-  imports: [AppComponent, BrowserModule, AppRoutingModule, RouterModule],
+  imports: [AppComponent, BrowserModule, AppRoutingModule, RouterModule, MatIconModule],
   providers: [],
   bootstrap: [],
 })
