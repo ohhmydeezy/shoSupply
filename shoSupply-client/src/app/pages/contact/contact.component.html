@@ -1,1 +1,75 @@
-<p>contact.component works!</p>
+<div class="h-screen">
+  <div class="mx-auto py-12">
+    <div class="max-w-xl mx-auto px-4">
+      <h2 class="flex justify-center text-7xl font-bold text-white pb-10">
+        Get In Touch
+      </h2>
+
+      <div class="relative flex bg-white rounded-lg shadow-md overflow-visible">
+        <div class="absolute w-14 -top-6 -left-6 z-30">
+          <!-- SVG STAR -->
+          <svg
+            width="60"
+            height="60"
+            viewBox="0 0 205 206"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M142.406 78.1253L136.073 81.6805C117.348 92.1927 93.6838 86.4751 81.8235 68.5731L77.4694 62.0009L81.3321 68.8734C91.8538 87.5935 86.1484 111.261 68.2524 123.13L62.2 127.144L68.533 123.589C87.2584 113.077 110.923 118.794 122.783 136.696L127.137 143.269L123.274 136.396C112.753 117.676 118.458 94.009 136.354 82.1396L142.406 78.1253ZM164.955 63.1732L165.997 64.8786L137.459 83.8063C120.436 95.0967 115.009 117.609 125.018 135.416L142.286 166.14L140.581 167.182L121.116 137.801C109.834 120.772 87.324 115.334 69.512 125.333L39.6512 142.096L38.609 140.391L67.147 121.463C84.17 110.173 89.5971 87.6603 79.5886 69.8534L62.3204 39.13L64.0258 38.0877L83.4908 67.4685C94.7725 84.4972 117.282 89.9359 135.094 79.9366L164.955 63.1732Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+        <!-- Teacher Image overlapping rightward -->
+        <div class="absolute -left-32 top-0 h-full z-50">
+          <img
+            src="assets/images/teacher-contact.png"
+            alt="Teacher"
+            class="h-full object-contain"
+          />
+        </div>
+
+        <!-- Contact Form -->
+        <form class="flex flex-col align-middle px-6 py-8 relative z-20 bg-white">
+
+          <!-- Form Fields -->
+          <div class="mb-4">
+            <input
+              class="appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="name"
+              type="text"
+              placeholder="Name"
+            />
+          </div>
+          <div class="mb-4">
+            <input
+              class="appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="email"
+              placeholder="Email"
+            />
+          </div>
+          <div class="mb-4">
+            <textarea
+              class="appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="message"
+              rows="6"
+              placeholder="Enter your message..."
+            ></textarea>
+          </div>
+          <div class="flex justify-end">
+            <button
+              class="send-button hover:bg-blue-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="button"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

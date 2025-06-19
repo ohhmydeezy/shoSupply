@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "sho-supply-home": "url('/assets/images/shoHomeBackground.png')",
+        "contact-background": "url('/assets/images/contact-background.png')",
       },
     },
   },
