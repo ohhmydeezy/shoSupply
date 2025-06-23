@@ -12,6 +12,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { NavComponent } from './components/nav/nav.component';
+import { ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NavComponent } from './components/nav/nav.component';
     NavComponent,
     AppComponent,
     BrowserModule,
+    ReactiveFormsModule,
     CommonModule,
     AppRoutingModule,
     RouterModule,

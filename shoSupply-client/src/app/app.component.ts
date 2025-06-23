@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { NavigationEnd, Router, RouterOutlet,} from '@angular/router';
+import { Component, inject, OnInit } from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
 import { NavComponent } from './components/nav/nav.component';
 import { CommonModule } from '@angular/common';
@@ -14,11 +14,10 @@ export class AppComponent {
   protected title = 'shoSupply-client';
 
   backgroundClass = 'bg-sho-supply-home';
-
-  constructor(private router: Router) {}
+  #router = inject(Router);
 
   ngOnInit(): void {
-    this.router.events
+    this.#router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
         const url = event.urlAfterRedirects;

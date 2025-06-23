@@ -24,7 +24,7 @@
           </svg>
         </div>
         <!-- Teacher Image overlapping rightward -->
-        <div class="absolute -left-32 top-0 h-full z-50">
+        <div class="absolute -left-36 top-0 h-full z-50">
           <img
             src="assets/images/teacher-contact.png"
             alt="Teacher"
@@ -33,13 +33,18 @@
         </div>
 
         <!-- Contact Form -->
-        <form class="flex flex-col align-middle px-6 py-8 relative z-20 bg-white">
-
+        <form
+          [formGroup]="FormData"
+          (ngSubmit)="sendEmail($event)"
+          class="flex flex-col align-middle relative z-20 bg-white ml-36 pt-24 pb-10 rounded-3xl"
+        >
           <!-- Form Fields -->
           <div class="mb-4">
             <input
               class="appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="name"
+              name="from_name"
+              formControlName="Name"
               type="text"
               placeholder="Name"
             />
@@ -48,7 +53,9 @@
             <input
               class="appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
-              type="email"
+              name="from_email"
+              formControlName="Email"
+              type="Email"
               placeholder="Email"
             />
           </div>
@@ -56,14 +63,17 @@
             <textarea
               class="appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="message"
+              name="message"
+              formControlName="Message"
               rows="6"
               placeholder="Enter your message..."
             ></textarea>
           </div>
           <div class="flex justify-end">
             <button
-              class="send-button hover:bg-blue-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="button"
+              [disabled]="!FormData.valid"
+              class="send-button hover:bg-blue-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline disabled:bg-gray-500"
+              type="submit"
             >
               Send
             </button>

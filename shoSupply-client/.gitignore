@@ -53,3 +53,6 @@ tsconfig.app.json
 #angular
 angular.json
 .editorconfig
+
+#environment 
+src/environments/environment.prod.ts
