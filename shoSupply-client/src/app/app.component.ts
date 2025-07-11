@@ -31,10 +31,16 @@ export class AppComponent {
         this.backgroundClass = 'bg-sho-supply-home';
         break;
       case url.includes('/About-Us'):
-        this.backgroundClass = 'bg-sho-supply-home';
+        this.backgroundClass = 'bg-about-background';
         break;
       case url.includes('/Contact-Us'):
         this.backgroundClass = 'bg-contact-background';
+        break;
+      case url.includes('/Teachers'):
+        this.backgroundClass = 'bg-about-background';
+        break;
+      case url.includes('/Workshops'):
+        this.backgroundClass = 'bg-about-background';
         break;
       default:
         this.backgroundClass = 'bg-sho-supply-home';

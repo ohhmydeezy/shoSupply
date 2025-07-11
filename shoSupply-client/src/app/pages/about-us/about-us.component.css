@@ -1,0 +1,153 @@
+.heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.heading h1 {
+  color: #ffffff;
+  font-size: 48px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0%;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  text-wrap: nowrap;
+  height: 58px;
+  margin-bottom: 20px;
+}
+
+.heading p {
+  color: #ffffff;
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  text-wrap: wrap;
+  width: 80%;
+}
+
+.mission-section {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .card-row {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: -40px;
+    z-index: 2;
+  }
+  
+  .color-card {
+    width: 300px;
+    height: 350px;
+    border-radius: 25px;
+    border: 3px solid black;
+  }
+  
+  .color-card.purple { background: #A400C0; }
+  .color-card.peach  { background: #FFD9A0; }
+  .color-card.mint   { background: #A0FFD4; }
+  .color-card.red    { background: #FF5252; }
+  
+  .mission-content {
+    background: white;
+    border-top: 20px solid black;
+    padding: 60px 40px 80px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .mission-content h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: black;
+    margin-bottom: 40px;
+  }
+  
+  .mission-columns {
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    text-align: left;
+  }
+  
+  .mission-columns p {
+    flex: 1;
+    width: 50px;
+    font-size: 28px;
+    font-family: 'Inter', sans-serif;
+    color: black;
+    font-weight: 400;
+    max-width: 500px;
+  }
+
+  .home-buttons {
+    background-color: purple;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 38px;
+    color: white;
+    margin-left: 50px;
+  }
+
+  .description h2 {
+    padding-top: 100px;
+    margin-left: 50px;
+    color: white;
+    font-size: 48px;
+    width: 400px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .description p {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .shapes_30-678 {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+  }
+  .clip-path-group_I30-678-2-190 {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    display: flex;
+    display: flex;
+  }
+  .clip0-116-159_I30-678-2-191 {
+    width: 200px;
+    height: 200px;
+  }
+  .vector_I30-678-2-192 {
+    display: flex;
+  }
+  
+  .group_I30-678-2-193 {
+    width: 200px;
+    height: 200px;
+  }
+  .vector_I30-678-2-194 {
+    display: flex;
+  }
+  
