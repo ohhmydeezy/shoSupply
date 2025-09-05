@@ -1,11 +1,6 @@
-.ticker-wrapper-outer {
-    width: 101vw;
-    position: relative;
-}
-
 
 .skillTicker {
-    font-size: 40px;
+    font-size: clamp(1rem, 5vw, 2.5rem); 
     padding-block: 8px;
     display: flex;
     overflow: hidden;
@@ -14,59 +9,55 @@
     border-bottom: 10px solid purple;
     user-select: none;
     background: white;
-    transform: rotate(-5.7deg) scaleX(1.05);
-    width: 100vw;
-    margin-left: -2.6vw;
+    transform: rotate(-5.7deg); 
+    width: 100%;
+    box-sizing: border-box; 
+}
 
-
-  }
-  
-  .label {
-    padding-left: 120px;
+.label {
+    padding-left: 5vw;
     font-weight: bold;
     margin-right: 2rem;
     white-space: nowrap;
-  }
-  
-  .ticker-wrapper {
+}
+
+.ticker-wrapper {
     flex: 1;
     overflow: hidden;
-  }
-  
-  .ticker-list {
+}
+
+.ticker-list {
     list-style: none;
     display: flex;
     gap: 2rem;
     animation: scroll 20s linear infinite;
-  }
-  
-  .skillTicker li {
+}
+
+.skillTicker li {
     font-weight: bold;
     white-space: nowrap;
-  }
-  
-  .ticker-list:hover {
+}
+
+.ticker-list:hover {
     animation-play-state: paused;
-  }
-  
-  @keyframes scroll {
+}
+
+@keyframes scroll {
     0% {
-      transform: translateX(0%);
+        transform: translateX(0%);
     }
     100% {
-      transform: translateX(-50%);
+        transform: translateX(-50%);
     }
-  }
+}
 
-  .ticker-list li::after {
+.ticker-list li::after {
     content: ' *';
     margin-left: 1rem;
     vertical-align: middle;
-  }
-  
-  .ticker-list li:last-child::after {
+}
+
+.ticker-list li:last-child::after {
     content: '';
     margin: 0;
-  }
-  
-  
+}

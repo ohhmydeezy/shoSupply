@@ -13,17 +13,18 @@ import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { NavComponent } from './components/nav/nav.component';
 import { ReactiveFormsModule} from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     HomeComponent,
     AboutUsComponent,
-    TeachersComponent,
     WorkshopsComponent,
     SliderComponent,
   ],
   imports: [
     ContactComponent,
+    TeachersComponent,
     NavComponent,
     AppComponent,
     BrowserModule,
@@ -33,6 +34,7 @@ import { ReactiveFormsModule} from '@angular/forms'
     RouterModule,
     MatIconModule,
     RouterOutlet,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [],

@@ -10,6 +10,9 @@ module.exports = {
         "contact-background": "url('/assets/images/contact-background.png')",
         "about-background": "url('/assets/images/aboutBackground.jpg')"
       },
+       borderRadius: {
+        '4xl': '4rem',
+       }
     },
   },
   plugins: [],

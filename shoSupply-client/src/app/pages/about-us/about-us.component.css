@@ -1,153 +1,198 @@
+/* Base styles for all screen sizes (mobile-first) */
 .heading {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
-
 
 .heading h1 {
   color: #ffffff;
-  font-size: 48px;
+  font-size: 2.5rem; /* Use rem for responsive font sizing */
   font-family: 'Inter', sans-serif;
-  letter-spacing: 0%;
-  text-decoration: none;
   font-weight: 500;
-  text-align: center;
-  text-wrap: nowrap;
-  height: 58px;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  text-wrap: balance; /* New CSS property to prevent nowrap */
 }
 
 .heading p {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 1.25rem;
   font-family: 'Inter', sans-serif;
-  text-decoration: none;
   font-weight: 500;
   text-align: center;
-  text-wrap: wrap;
-  width: 80%;
+  width: 90%; /* Use a percentage for a more flexible width */
+  max-width: 600px;
 }
 
 .mission-section {
-    display: flex;
-    margin-top: 50px;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
-  
-  .card-row {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin-bottom: -40px;
-    z-index: 2;
-  }
-  
-  .color-card {
-    width: 300px;
-    height: 350px;
-    border-radius: 25px;
-    border: 3px solid black;
-  }
-  
-  .color-card.purple { background: #A400C0; }
-  .color-card.peach  { background: #FFD9A0; }
-  .color-card.mint   { background: #A0FFD4; }
-  .color-card.red    { background: #FF5252; }
-  
-  .mission-content {
-    background: white;
-    border-top: 20px solid black;
-    padding: 60px 40px 80px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-  }
-  
-  .mission-content h2 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 36px;
-    color: black;
-    margin-bottom: 40px;
-  }
-  
-  .mission-columns {
-    display: flex;
-    justify-content: space-around;
-    gap: 5px;
-    text-align: left;
-  }
-  
-  .mission-columns p {
-    flex: 1;
-    width: 50px;
-    font-size: 28px;
-    font-family: 'Inter', sans-serif;
-    color: black;
-    font-weight: 400;
-    max-width: 500px;
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.card-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  gap: 1.5rem;
+  margin-bottom: -1rem;
+  z-index: 2;
+}
+
+.color-card {
+  width: 150px; /* Base width for small screens */
+  height: 175px;
+  border-radius: 25px;
+  border: 3px solid black;
+}
+
+.color-card.purple { background: #A400C0; }
+.color-card.peach  { background: #FFD9A0; }
+.color-card.mint   { background: #A0FFD4; }
+.color-card.red    { background: #FF5252; }
+
+.mission-content {
+  background: white;
+  border-top: 20px solid black;
+  padding: 2.5rem 1.5rem; /* Use rems for padding */
+  width: 100vw;
+  text-align: center;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.mission-content h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.mission-columns {
+  display: flex;
+  flex-direction: column; /* Stack columns on small screens */
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.mission-columns p {
+  width: 100%; /* Make paragraphs fill their container */
+  font-size: 1.15rem;
+  font-family: 'Inter', sans-serif;
+  color: black;
+  font-weight: 400;
+  max-width: 500px;
+}
+
+.home-buttons {
+  background-color: purple;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 38px;
+  color: white;
+  /* Remove fixed margin-left to allow it to be centered */
+  margin-left: 0;
+}
+
+.description h2 {
+  padding-top: 2rem;
+  color: white;
+  font-size: 2.5rem;
+  width: 100%; /* Use a flexible width */
+  max-width: 400px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+}
+
+.description p {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- Media Queries for larger screens --- */
+@media (min-width: 768px) {
+  .heading h1 {
+    font-size: 3rem;
   }
 
-  .home-buttons {
-    background-color: purple;
-    margin-top: 50px;
-    padding: 20px;
-    border-radius: 38px;
-    color: white;
-    margin-left: 50px;
+  .heading p {
+    font-size: 1.5rem;
+  }
+
+  .card-row {
+    gap: 3rem;
+  }
+
+  .color-card {
+    width: 250px;
+    height: 290px;
+  }
+
+  .mission-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .mission-columns {
+    flex-direction: row; /* Switch to a row layout on larger screens */
+    gap: 1.5rem;
+  }
+
+  .mission-columns p {
+    font-size: 1.5rem;
   }
 
   .description h2 {
-    padding-top: 100px;
-    margin-left: 50px;
-    color: white;
+    padding-top: 5rem;
+    font-size: 3rem;
+  }
+
+  .home-buttons {
+    padding: 1.25rem 2.5rem;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading h1 {
     font-size: 48px;
-    width: 400px;
-    font-weight: 500;
-    font-family: 'Inter', sans-serif;
   }
 
-  .description p {
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    font-family: 'Inter', sans-serif;
+  .heading p {
+    font-size: 24px;
   }
 
-  .shapes_30-678 {
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
+  .card-row {
+    gap: 60px;
   }
-  .clip-path-group_I30-678-2-190 {
-    top: 0px;
-    left: 0px;
-    position: absolute;
-    display: flex;
-    display: flex;
+
+  .color-card {
+    width: 300px;
+    height: 350px;
   }
-  .clip0-116-159_I30-678-2-191 {
-    width: 200px;
-    height: 200px;
+
+  .mission-content h2 {
+    font-size: 36px;
   }
-  .vector_I30-678-2-192 {
-    display: flex;
+
+  .mission-columns {
+    gap: 5px;
   }
-  
-  .group_I30-678-2-193 {
-    width: 200px;
-    height: 200px;
+
+  .mission-columns p {
+    font-size: 28px;
   }
-  .vector_I30-678-2-194 {
-    display: flex;
+
+  .description h2 {
+    font-size: 48px;
   }
-  
+}

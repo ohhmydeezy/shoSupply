@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Alex",
+    "bio": "An experienced math teacher with 10+ years in education.",
+    "image": "assets/images/cardell-fin.png"
+  },
+  {
+    "name": "Tanisha",
+    "bio": "Science teacher passionate about biology and chemistry.",
+    "image": "assets/images/tanisha.png"
+  },
+  {
+    "name": "Annell",
+    "bio": "Science teacher passionate about biology and chemistry.",
+    "image": "assets/images/annell.png"
+  },
+  {
+    "name": "Brian",
+    "bio": "Science teacher passionate about biology and chemistry.",
+    "image": "assets/images/brian.png"
+  }
+]

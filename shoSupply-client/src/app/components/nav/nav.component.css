@@ -12,3 +12,7 @@
 .nav-button:hover {
   color: aqua;
 }
+
+.bar-nav {
+  height: 100px;
+}
