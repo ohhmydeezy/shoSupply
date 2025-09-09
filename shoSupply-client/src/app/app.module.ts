@@ -12,19 +12,22 @@ import { SliderComponent } from './components/slider/slider.component';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { NavComponent } from './components/nav/nav.component';
-import { ReactiveFormsModule} from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     AboutUsComponent,
-    WorkshopsComponent,
     SliderComponent,
+    
   ],
   imports: [
     ContactComponent,
     TeachersComponent,
+    WorkshopsComponent,
+    FooterComponent,
     NavComponent,
     AppComponent,
     BrowserModule,
@@ -34,7 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     MatIconModule,
     RouterOutlet,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [],

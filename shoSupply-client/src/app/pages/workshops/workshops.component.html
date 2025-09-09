@@ -1,32 +1,55 @@
 <div class="min-h-screen px-4 py-8">
   <!-- Title -->
   <div class="title mb-8 text-center">
-    <h1 class="text-white text-4xl font-bold">Our Workshops</h1>
+    <h2 class="text-white text-xl font-semibold pt-5">
+      Due to our wide range of talented teachers, we are able to provide
+      Workshops from a wide range of shows. <br />these workshops are perfect
+      for holidays, as cover or end of term treat. <br />
+      below you will be able to see which workshops we can offer, which
+      performer will be able to deliver the workshop and in which discipline. <br> please contact us by email, phone or on our contact page for a quote.
+    </h2>
   </div>
 
-  <!-- Responsive Grid -->
-  <div class="grid gap-6 max-w-6xl mx-auto
-              grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
-              grid-rows-[repeat(6,minmax(0,1fr))] lg:grid-rows-2">
+  <section >
+    
+    <div class="team-profile">
+      <!-- Profile Images -->
+      <div #profileImageContainer class="profile-images">
+        <div
+          class="img rounded-4xl"
+          #profileImage
+          *ngFor="let workshop of workshops; let i = index"
+          (click)="onWorkshopClick(i, $event)"
+        >
+          <img [src]="workshop.image" [alt]="workshop.name + ' Headshot'" />
+        </div>
+      </div>
+      <!-- Profile Names -->
+      <div class="profile-names">
+        <!-- Default heading -->
+        <div #name class="name default active items-center">
+          <h1 #nameHeading>Our Workshops</h1>
+        </div>
 
-    <!-- Tall red block (video 1) -->
-    <div class="sm:row-span-2 lg:row-span-2">
-      <div class="bg-red-600 rounded-2xl w-full h-full min-h-[200px] sm:min-h-[300px] shadow-lg"></div>
+        <!-- Teacher names from JSON -->
+        <div *ngFor="let workshop of workshops" #name class="name">
+          <h1 #nameHeading>{{ workshop.name }}</h1>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Top square (video 2) -->
-    <div>
-      <div class="bg-blue-800 rounded-2xl w-full aspect-square shadow-lg"></div>
-    </div>
-
-    <!-- Top square (video 3) -->
-    <div>
-      <div class="bg-fuchsia-600 rounded-2xl w-full aspect-square shadow-lg"></div>
-    </div>
-
-    <!-- Bottom wide (video 4) -->
-    <div class="sm:col-span-2 lg:col-span-2">
-      <div class="bg-yellow-300 rounded-2xl w-full h-40 sm:h-full shadow-lg"></div>
-    </div>
+  <!-- Info Popup -->
+  <div
+    *ngIf="selectedWorkshop"
+    class="info-popup"
+    (click)="$event.stopPropagation()"
+  >
+    <button (click)="closePopup()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <img [src]="selectedWorkshop.image" alt="{{ selectedWorkshop.name }}" />
+    <h3>{{ selectedWorkshop.name }}</h3>
+    <p>{{ selectedWorkshop.bio }}</p>
   </div>
 </div>

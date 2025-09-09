@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Pippen",
+    "image": "assets/images/pippen.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "Chicago",
+    "image": "assets/images/chicago.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "The lion King",
+    "image": "assets/images/tlk.png",
+        "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "Guys & Dolls",
+    "image": "assets/images/gnd.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "Evita",
+    "image": "assets/images/evita.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "Singing In the Rain",
+    "image": "assets/images/sitr.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "Tina The Musical",
+    "image": "assets/images/tina.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "Mamma Mia",
+    "image": "assets/images/mamma.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "Winnie The Pooh",
+    "image": "assets/images/winnie.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "Box Of Delights",
+    "image": "assets/images/boxofdelights.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "Sweet Charity",
+    "image": "assets/images/boxofdelights.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "Book of Mormon",
+    "image": "assets/images/mormon.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "Hairspray",
+    "image": "assets/images/hairspray.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "Cats",
+    "image": "assets/images/cats.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "The Producers",
+    "image": "assets/images/producers.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "Young Freankenstein",
+    "image": "assets/images/young-frank.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  },
+  {
+    "name": "42nd Street",
+    "image": "assets/images/42ndstreet.png",
+    "bio": "",
+    "Teachers": ["Alex", "Annell"]
+  }
+]

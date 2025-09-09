@@ -1,13 +1,11 @@
 .nav-button {
   display: block;
   font-weight: bold;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding: 0.25rem 0.25rem; 
   border-radius: 0.125rem;
-  color:rgb(241, 241, 241);
+  color: rgb(230, 230, 230);
 }
+
 
 .nav-button:hover {
   color: aqua;
@@ -15,4 +13,9 @@
 
 .bar-nav {
   height: 100px;
+}
+
+
+a {
+  text-decoration: none;
 }
