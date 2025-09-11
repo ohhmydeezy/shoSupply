@@ -1,63 +1,74 @@
+body {
+  overflow-x: hidden;
+}
+
+.ticker-container {
+  overflow: hidden;
+  padding-block: 5vw;
+}
+
 
 .skillTicker {
-    font-size: clamp(1rem, 5vw, 2.5rem); 
-    padding-block: 8px;
-    display: flex;
-    overflow: hidden;
-    align-items: center;
-    border-top: 10px solid purple;
-    border-bottom: 10px solid purple;
-    user-select: none;
-    background: white;
-    transform: rotate(-5.7deg); 
-    width: 100%;
-    box-sizing: border-box; 
+  font-size: clamp(1rem, 5vw, 2.5rem);
+  display: flex;
+  align-items: center;
+  border-top: 10px solid purple;
+  border-bottom: 10px solid purple;
+  user-select: none;
+  background: white;
+  transform: rotate(-5.7deg);
+  width: 110%;
+  position: relative;
+  left: -5vw;
 }
 
 .label {
-    padding-left: 5vw;
-    font-weight: bold;
-    margin-right: 2rem;
-    white-space: nowrap;
+  padding-left: 5vw;
+  font-weight: bold;
+  margin-right: 2rem;
+  white-space: nowrap;
+  z-index: 2;
 }
 
 .ticker-wrapper {
-    flex: 1;
-    overflow: hidden;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
 }
 
 .ticker-list {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    animation: scroll 20s linear infinite;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+  will-change: transform;
 }
 
 .skillTicker li {
-    font-weight: bold;
-    white-space: nowrap;
+  font-weight: bold;
 }
 
 .ticker-list:hover {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 @keyframes scroll {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .ticker-list li::after {
-    content: ' *';
-    margin-left: 1rem;
-    vertical-align: middle;
+  content: ' *';
+  margin-left: 1rem;
+  vertical-align: middle;
 }
 
 .ticker-list li:last-child::after {
-    content: '';
-    margin: 0;
+  content: '';
+  margin: 0;
 }
