@@ -19,7 +19,7 @@ import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     HomeComponent,
-    AboutUsComponent,
+    
     SliderComponent,
     
   ],
@@ -28,6 +28,7 @@ import { FooterComponent } from './components/footer/footer.component';
     TeachersComponent,
     WorkshopsComponent,
     FooterComponent,
+    AboutUsComponent,
     NavComponent,
     AppComponent,
     BrowserModule,

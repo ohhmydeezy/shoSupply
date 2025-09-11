@@ -1,6 +1,17 @@
 <div>
   <section>
     <div class="team-profile">
+      <div class="profile-names">
+        <!-- Default heading -->
+        <div #name class="name default active items-center">
+          <h1 #nameHeading>Our Team</h1>
+        </div>
+        <!-- Teacher names from JSON -->
+        <div *ngFor="let teacher of teachers" #name class="name">
+          <h1 #nameHeading>{{ teacher.name }}</h1>
+        </div>
+      </div>
+
       <!-- Profile Images -->
       <div #profileImageContainer class="profile-images">
         <div
@@ -13,17 +24,6 @@
         </div>
       </div>
       <!-- Profile Names -->
-      <div class="profile-names">
-        <!-- Default heading -->
-        <div #name class="name default active items-center">
-          <h1 #nameHeading>Our Team</h1>
-        </div>
-
-        <!-- Teacher names from JSON -->
-        <div *ngFor="let teacher of teachers" #name class="name">
-          <h1 #nameHeading>{{ teacher.name }}</h1>
-        </div>
-      </div>
     </div>
   </section>
 

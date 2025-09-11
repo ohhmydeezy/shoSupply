@@ -6,12 +6,24 @@
       Workshops from a wide range of shows. <br />these workshops are perfect
       for holidays, as cover or end of term treat. <br />
       below you will be able to see which workshops we can offer, which
-      performer will be able to deliver the workshop and in which discipline. <br> please contact us by email, phone or on our contact page for a quote.
+      performer will be able to deliver the workshop and in which discipline.
+      <br />
+      please contact us by email, phone or on our contact page for a quote.
     </h2>
   </div>
 
-  <section >
-    
+  <section>
+    <div class="profile-names">
+      <!-- Default heading -->
+      <div #name class="name default active items-center">
+        <h1 #nameHeading>Our Workshops</h1>
+      </div>
+
+      <!-- Teacher names from JSON -->
+      <div *ngFor="let workshop of workshops" #name class="name">
+        <h1 #nameHeading>{{ workshop.name }}</h1>
+      </div>
+    </div>
     <div class="team-profile">
       <!-- Profile Images -->
       <div #profileImageContainer class="profile-images">
@@ -25,17 +37,6 @@
         </div>
       </div>
       <!-- Profile Names -->
-      <div class="profile-names">
-        <!-- Default heading -->
-        <div #name class="name default active items-center">
-          <h1 #nameHeading>Our Workshops</h1>
-        </div>
-
-        <!-- Teacher names from JSON -->
-        <div *ngFor="let workshop of workshops" #name class="name">
-          <h1 #nameHeading>{{ workshop.name }}</h1>
-        </div>
-      </div>
     </div>
   </section>
 

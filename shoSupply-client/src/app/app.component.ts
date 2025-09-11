@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
 import { NavComponent } from './components/nav/nav.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
@@ -16,12 +16,14 @@ export class AppComponent {
 
   backgroundClass = 'bg-sho-supply-home';
   #router = inject(Router);
+  #viewportScroller = inject(ViewportScroller)
 
   ngOnInit(): void {
     this.#router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
         const url = event.urlAfterRedirects;
+        this.#viewportScroller.scrollToPosition([0,0])
         this.setBackgroundClass(url);
       });
   }
