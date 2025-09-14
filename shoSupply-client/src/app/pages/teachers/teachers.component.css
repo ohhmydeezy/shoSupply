@@ -22,6 +22,30 @@ section {
   overflow: hidden;
 }
 
+.team-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
+}
+
+.profile-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 15px; 
+}
+
+
+.description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: white;
+  width: 50vw;
+}
+
 .profile-images {
   width: max-content;
   display: flex;
@@ -41,7 +65,7 @@ section {
 
 .profile-names {
   width: 100%;
-  height: 10rem;
+  min-height: 10rem;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   overflow: hidden;
   position: relative;

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -9,4 +9,72 @@ import { RouterModule } from '@angular/router';
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.css'],
 })
-export class AboutUsComponent {}
+export class AboutUsComponent implements AfterViewInit {
+  @ViewChild('video', { static: false })
+  videoPlayer!: ElementRef<HTMLVideoElement>;
+
+
+  ngAfterViewInit() {
+    // Any initialization logic that needs the view to be ready
+    if (this.videoPlayer && this.videoPlayer.nativeElement) {
+      const video = this.videoPlayer.nativeElement;
+
+      // Set initial state based on current video state
+      this.isVideoPaused = video.paused;
+      this.videoDuration = video.duration || 0;
+      this.currentTime = video.currentTime || 0;
+
+      // Any other initialization logic you need
+    }
+  }
+
+  isVideoPaused = true;
+  currentTime = 0;
+  videoDuration = 0;
+
+  onVideoPlay() {
+    this.isVideoPaused = false;
+  }
+
+  onVideoPause() {
+    this.isVideoPaused = true;
+  }
+
+  onVideoLoaded(event: Event) {
+    const video = event.target as HTMLVideoElement;
+    this.videoDuration = video.duration;
+  }
+
+  onTimeUpdate(event: Event) {
+    const video = event.target as HTMLVideoElement;
+    this.currentTime = video.currentTime;
+  }
+
+  toggleVideo() {
+    if (this.videoPlayer && this.videoPlayer.nativeElement) {
+      const video = this.videoPlayer.nativeElement;
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
+  }
+
+  seekVideo(event: Event) {
+    if (this.videoPlayer && this.videoPlayer.nativeElement) {
+      const video = this.videoPlayer.nativeElement;
+      const target = event.target as HTMLInputElement;
+      const seekTime = parseFloat(target.value);
+      video.currentTime = seekTime;
+    }
+  }
+
+  formatTime(timeInSeconds: number): string {
+    if (isNaN(timeInSeconds)) return '0:00';
+
+    const minutes = Math.floor(timeInSeconds / 60);
+    const seconds = Math.floor(timeInSeconds % 60);
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  }
+}

@@ -1,5 +1,5 @@
 <div>
-  <section>
+  <section class="mb-5">
     <div class="team-profile">
       <div class="profile-names">
         <!-- Default heading -->
@@ -10,6 +10,15 @@
         <div *ngFor="let teacher of teachers" #name class="name">
           <h1 #nameHeading>{{ teacher.name }}</h1>
         </div>
+      </div>
+      <div class="description text-center mb-4">
+        <p>
+          At ShoSupply, all of our teachers have experience in teaching and/or
+          performing professionally. Each teacher holds an enhanced DBS,
+          and some also have additional qualifications, such as music grades and
+          dance teaching certifications. We are committed to building a diverse
+          and inclusive team.
+        </p>
       </div>
 
       <!-- Profile Images -->

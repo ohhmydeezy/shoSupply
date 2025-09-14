@@ -1,5 +1,16 @@
 <div class="min-h-screen px-4 py-8">
   <!-- Title -->
+   <div class="profile-names">
+      <!-- Default heading -->
+      <div #name class="name default active items-center">
+        <h1 #nameHeading>Our Workshops</h1>
+      </div>
+
+      <!-- Teacher names from JSON -->
+      <div *ngFor="let workshop of workshops" #name class="name">
+        <h1 #nameHeading>{{ workshop.name }}</h1>
+      </div>
+    </div>
   <div class="title mb-8 text-center">
     <h2 class="text-white text-xl font-semibold pt-5">
       Due to our wide range of talented teachers, we are able to provide
@@ -13,17 +24,6 @@
   </div>
 
   <section>
-    <div class="profile-names">
-      <!-- Default heading -->
-      <div #name class="name default active items-center">
-        <h1 #nameHeading>Our Workshops</h1>
-      </div>
-
-      <!-- Teacher names from JSON -->
-      <div *ngFor="let workshop of workshops" #name class="name">
-        <h1 #nameHeading>{{ workshop.name }}</h1>
-      </div>
-    </div>
     <div class="team-profile">
       <!-- Profile Images -->
       <div #profileImageContainer class="profile-images">
