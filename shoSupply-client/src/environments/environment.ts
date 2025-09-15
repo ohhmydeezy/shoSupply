@@ -1,7 +1,7 @@
 // environment.ts
 export const environment = {
   production: false,
-  ApiUrl: 'https://mailthis.to/your-alias', // Replace with your actual alias
+  ApiUrl: 'https://mailthis.to/your-alias',
   apiKey: 'your-dev-api-key',
 
   mailJsPublicKey: 'Nt7IbAdkqbE0KUTuv',

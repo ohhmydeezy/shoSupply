@@ -13,24 +13,18 @@ export class AboutUsComponent implements AfterViewInit {
   @ViewChild('video', { static: false })
   videoPlayer!: ElementRef<HTMLVideoElement>;
 
+  isVideoPaused = true;
+  currentTime = 0;
+  videoDuration = 0; 
+
 
   ngAfterViewInit() {
-    // Any initialization logic that needs the view to be ready
     if (this.videoPlayer && this.videoPlayer.nativeElement) {
-      const video = this.videoPlayer.nativeElement;
-
-      // Set initial state based on current video state
-      this.isVideoPaused = video.paused;
-      this.videoDuration = video.duration || 0;
-      this.currentTime = video.currentTime || 0;
-
-      // Any other initialization logic you need
+      this.isVideoPaused = this.videoPlayer.nativeElement.paused;
     }
   }
 
-  isVideoPaused = true;
-  currentTime = 0;
-  videoDuration = 0;
+
 
   onVideoPlay() {
     this.isVideoPaused = false;
@@ -42,7 +36,8 @@ export class AboutUsComponent implements AfterViewInit {
 
   onVideoLoaded(event: Event) {
     const video = event.target as HTMLVideoElement;
-    this.videoDuration = video.duration;
+    this.videoDuration = video.duration || 0;
+    this.currentTime = video.currentTime || 0;
   }
 
   onTimeUpdate(event: Event) {
