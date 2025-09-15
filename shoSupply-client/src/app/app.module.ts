@@ -17,13 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    
-    SliderComponent,
-    
-  ],
+  declarations: [HomeComponent, SliderComponent, ],
   imports: [
+    
     ContactComponent,
     TeachersComponent,
     WorkshopsComponent,

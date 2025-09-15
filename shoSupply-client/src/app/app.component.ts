@@ -1,31 +1,76 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
 import { NavComponent } from './components/nav/nav.component';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
+import { PageLoaderComponent } from "./components/page-loader/page-loader.component";
+import { PageLoaderService } from './services/page-loader';
 
 @Component({
   selector: 'app-root',
-  imports: [NavComponent, CommonModule, RouterOutlet, FooterComponent],
+  imports: [
+    NavComponent,
+    CommonModule,
+    RouterOutlet,
+    FooterComponent,
+    PageLoaderComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   protected title = 'shoSupply-client';
 
   backgroundClass = 'bg-sho-supply-home';
   #router = inject(Router);
-  #viewportScroller = inject(ViewportScroller)
+  #pageLoaderService = inject(PageLoaderService);
+  #viewportScroller = inject(ViewportScroller);
 
   ngOnInit(): void {
-    this.#router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe((event: NavigationEnd) => {
+    this.#router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.#pageLoaderService.show('Loading...');
+      }
+
+      if (
+        event instanceof NavigationEnd ||
+        event instanceof NavigationCancel ||
+        event instanceof NavigationError
+      ) {
+        this.#pageLoaderService.hide();
+      }
+
+      if (event instanceof NavigationEnd) {
         const url = event.urlAfterRedirects;
-        this.#viewportScroller.scrollToPosition([0,0])
+        this.#viewportScroller.scrollToPosition([0, 0]);
         this.setBackgroundClass(url);
-      });
+      }
+    });
+  }
+
+  pageLoad() {
+    let progress = 0;
+    this.#pageLoaderService.show('Loading', 0);
+
+    const increment = setInterval(() => {
+      progress++;
+      if (progress === 100) {
+        this.#pageLoaderService.hide();
+        clearInterval(increment);
+      }
+      let msg =
+        progress < 25
+          ? 'Loading started'
+          : progress < 50
+          ? 'Going strong'
+          : progress < 75
+          ? 'Any minute now'
+          : 'Almost there';
+
+      this.#pageLoaderService.setMessage(msg);
+      this.#pageLoaderService.setProgressValue(progress);
+    }, 50);
   }
 
   setBackgroundClass(url: string): void {

@@ -1,0 +1,34 @@
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000aa;
+}
+.loader-message-container {
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+.loader-progress-container {
+  padding: 5px;
+  min-height: 1.3rem;
+  width: 80%;
+  max-width: 600px;
+  background-color: rgb(210, 0, 203);
+  margin: 10px auto 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: rgb(0, 162, 255);
+  width: 0; 
+  transition: width 0.3s ease;
+}
+
