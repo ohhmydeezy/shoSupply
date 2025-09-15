@@ -41,9 +41,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-#node packages
-package.json
-package-lock.json
 
 #tsconfig 
 tsconfig.json
@@ -51,8 +48,8 @@ tsconfig.spec.json
 tsconfig.app.json
 
 #angular
-angular.json
 .editorconfig
 
 #environment 
 src/environments/environment.prod.ts
+src/environments/environment.ts
