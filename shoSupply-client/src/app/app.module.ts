@@ -15,18 +15,20 @@ import { NavComponent } from './components/nav/nav.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [HomeComponent, SliderComponent, ],
   imports: [
-    
+    HomeComponent,
+    SliderComponent,
     ContactComponent,
     TeachersComponent,
     WorkshopsComponent,
     FooterComponent,
     AboutUsComponent,
     NavComponent,
-    AppComponent,
+
     BrowserModule,
     ReactiveFormsModule,
     CommonModule,
@@ -35,6 +37,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatIconModule,
     RouterOutlet,
     HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [],

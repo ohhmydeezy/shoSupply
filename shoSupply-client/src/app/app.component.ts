@@ -1,6 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterOutlet } from '@angular/router';
-import { filter } from 'rxjs';
 import { NavComponent } from './components/nav/nav.component';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
@@ -9,6 +8,7 @@ import { PageLoaderService } from './services/page-loader';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
     NavComponent,
     CommonModule,

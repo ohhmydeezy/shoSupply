@@ -10,9 +10,14 @@
     "Teachers": ["Tanisha"]
   },
   {
+    "name": "Back To The Future",
+    "image": "assets/images/bttf.png",
+    "Teachers": ["Brian"]
+  },
+  {
     "name": "The lion King",
     "image": "assets/images/tlk.png",
-  
+
     "Teachers": ["Tanisha"]
   },
   {

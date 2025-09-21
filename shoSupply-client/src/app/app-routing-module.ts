@@ -1,4 +1,4 @@
-import { inject, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
@@ -12,19 +12,15 @@ export const routes: Routes = [
   { path: 'Teachers', component: TeachersComponent },
   { path: 'Workshops', component: WorkshopsComponent },
   { path: 'Contact-Us', component: ContactComponent },
-];
-
+]
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
-  anchorScrolling: 'enabled'
+  anchorScrolling: 'enabled',
 };
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {
-
-
-}
+export class AppRoutingModule {}

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-slider',
-  standalone: false,
+  standalone: true,
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.css'
 })
