@@ -21,6 +21,11 @@
     "Teachers": ["Tanisha"]
   },
   {
+    "name": "Winnie The Pooh",
+    "image": "assets/images/winnie.png",
+    "Teachers": ["Alex"]
+  },
+  {
     "name": "Guys & Dolls",
     "image": "assets/images/gnd.png",
     "Teachers": ["Tanisha"]
@@ -28,7 +33,7 @@
   {
     "name": "Evita",
     "image": "assets/images/evita.png",
-    "Teachers": ["Alex", "Tanisha"]
+    "Teachers": ["Tanisha, Alex, Shona"]
   },
   {
     "name": "Singing In the Rain",
@@ -45,21 +50,7 @@
     "image": "assets/images/mamma.png",
     "Teachers": ["Annell"]
   },
-  {
-    "name": "Winnie The Pooh",
-    "image": "assets/images/winnie.png",
-    "Teachers": ["Alex"]
-  },
-  {
-    "name": "Box Of Delights",
-    "image": "assets/images/boxofdelights.png",
-    "Teachers": ["Alex"]
-  },
-  {
-    "name": "Sweet Charity",
-    "image": "assets/images/sweet-charity.png",
-    "Teachers": ["Alex"]
-  },
+
   {
     "name": "Book of Mormon",
     "image": "assets/images/mormon.png",
@@ -83,11 +74,26 @@
   {
     "name": "Young Freankenstein",
     "image": "assets/images/young-frank.png",
-    "Teachers": ["Brian"]
+    "Teachers": ["Brian, Shona"]
   },
   {
     "name": "42nd Street",
     "image": "assets/images/42ndstreet.png",
     "Teachers": ["Brian"]
-  }
+  },
+  {
+    "name": "Sweet Charity",
+    "image": "assets/images/sweet-charity.png",
+    "Teachers": ["Alex"]
+  },
+  {
+    "name": "Box Of Delights",
+    "image": "assets/images/boxofdelights.png",
+    "Teachers": ["Alex"]
+  },
+    {
+      "name": "Nativity",
+      "image": "assets/images/nativity.png",
+      "Teachers": ["Shona"]
+    }
 ]

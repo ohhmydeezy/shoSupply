@@ -57,11 +57,12 @@
 
   <!-- Mission Section -->
   <section class="mission-section overflow-hidden">
-    <div class="card-row">
-      <div class="color-card purple"></div>
-      <div class="color-card peach"></div>
-      <div class="color-card mint"></div>
-      <div class="color-card red"></div>
+    <div class="card-container">
+      <div class="card-row">
+        <div class="color-card peach"></div>
+        <div class="color-card mint"></div>
+        <div class="color-card red"></div>
+      </div>
     </div>
 
     <div class="mission-content">
@@ -107,13 +108,14 @@
               class="w-full h-full object-cover"
               playsinline
               preload="metadata"
+              poster="assets/images/video-thumb.jpg"
               (play)="onVideoPlay()"
               (pause)="onVideoPause()"
               (loadedmetadata)="onVideoLoaded($event)"
               (timeupdate)="onTimeUpdate($event)"
             >
               <source
-                src="assets/videos/ShoSupply-Intro.MP4"
+                src="assets/videos/ShoSupply-Intro.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.

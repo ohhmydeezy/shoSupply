@@ -131,9 +131,13 @@ section {
 }
 
 .info-popup img {
-  width: 100%;
-  border-radius: 4px;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
+
 
 .info-popup h3 {
   margin-top: 0.5em;

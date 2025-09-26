@@ -18,5 +18,15 @@
     "name": "Brian",
     "bio": "Brian is a West End performer who regularly teaches at Pineapple Studios. He specialises in teaching Jazz, ballet, tap, lyrical and musical theatre dancing as well as musical theatre song and text. Brian is available for workshops, please view our workshops page. ",
     "image": "assets/images/brian.png"
+  },
+  {
+    "name": "Amelia",
+    "bio": "Amelia is a performer and teacher who trained at GSA and Italia Conti. She is a highly qualified teacher, specialising in teaching ISTD modern, ballet and tap, RAD ballet as well as acro and gymnastics, being a gymnast herself for several years. She is also able to teach acting for musical theatre groups as well as LAMDA!  ",
+    "image": "assets/images/amelia.png"
+  },
+  {
+    "name": "Shona",
+    "bio": "Shona is a performer and teacher who trained at Arts Ed and has over 13 years old teaching experience. She specialises in teaching singing, musical theatre dance and acting, including film and tv from her screen experiences. Shona is available to workshops as well as teaching, please see our workshop page.",
+    "image": "assets/images/shona.png"
   }
 ]
