@@ -48,7 +48,7 @@
   {
     "name": "Mamma Mia",
     "image": "assets/images/mamma.png",
-    "Teachers": ["Annell"]
+    "Teachers": ["Annell, Jessie"]
   },
 
   {
@@ -91,9 +91,14 @@
     "image": "assets/images/boxofdelights.png",
     "Teachers": ["Alex"]
   },
+  {
+    "name": "Nativity",
+    "image": "assets/images/nativity.png",
+    "Teachers": ["Shona"]
+  },
     {
-      "name": "Nativity",
-      "image": "assets/images/nativity.png",
-      "Teachers": ["Shona"]
+      "name": "Grease",
+      "image": "assets/images/grease.png",
+      "Teachers": ["Jessie"]
     }
 ]

@@ -1,5 +1,10 @@
 [
   {
+    "name": "Shona",
+    "bio": "Shona is a performer and teacher who trained at Arts Ed and has over 13 years old teaching experience. She specialises in teaching singing, musical theatre dance and acting, including film and tv from her screen experiences. Shona is available to workshops as well as teaching, please see our workshop page.",
+    "image": "assets/images/shona.png"
+  },
+  {
     "name": "Alex",
     "bio": "Alex is a performer and teacher with 10+ years of teaching experience, who trained at ArtsEd. He specialises in teaching acting, including classical and modern text, as well as musical theatre singing, musical theatre dance and drums up to Grade 8. Alex is available for workshops, please view our workshops page. ",
     "image": "assets/images/cardell-fin.png"
@@ -21,12 +26,12 @@
   },
   {
     "name": "Amelia",
-    "bio": "Amelia is a performer and teacher who trained at GSA and Italia Conti. She is a highly qualified teacher, specialising in teaching ISTD modern, ballet and tap, RAD ballet as well as acro and gymnastics, being a gymnast herself for several years. She is also able to teach acting for musical theatre groups as well as LAMDA!  ",
+    "bio": "Amelia is a highly qualified teacher, specialising in teaching ISTD modern and tap. She can also teach ballet, acro and gymnastics, being a gymnast herself for several years, and acting for musical theatre groups as well as LAMDA!   ",
     "image": "assets/images/amelia.png"
   },
   {
-    "name": "Shona",
-    "bio": "Shona is a performer and teacher who trained at Arts Ed and has over 13 years old teaching experience. She specialises in teaching singing, musical theatre dance and acting, including film and tv from her screen experiences. Shona is available to workshops as well as teaching, please see our workshop page.",
-    "image": "assets/images/shona.png"
+    "name": "Jessie",
+    "bio": "Jessie is a performer and teacher who trained at Emil Dale. She specialises in teaching different genres of dance such as jazz, contemporary, lyrical, commercial and musical theatre. She also loves to teach musical theatre acting, singing and acting through song! Jessie is also available for workshops such as Grease and Mamma Mia! Please see our workshop page on our website for more details. ",
+    "image": "assets/images/jessie.png"
   }
 ]
