@@ -12,7 +12,7 @@
   {
     "name": "Back To The Future",
     "image": "assets/images/bttf.png",
-    "Teachers": ["Brian"]
+    "Teachers": ["Brian, Nic"]
   },
   {
     "name": "The lion King",
@@ -96,9 +96,29 @@
     "image": "assets/images/nativity.png",
     "Teachers": ["Shona"]
   },
-    {
-      "name": "Grease",
-      "image": "assets/images/grease.png",
-      "Teachers": ["Jessie"]
-    }
+  {
+    "name": "Grease",
+    "image": "assets/images/grease.png",
+    "Teachers": ["Jessie"]
+  },
+  {
+    "name": "Brigadoon",
+    "image": "assets/images/brigadoon.png",
+    "Teachers": ["Tanisha, Jessie & Nic"]
+  },
+  {
+    "name": "Cruel Intentions",
+    "image": "assets/images/cruel-intentions.png",
+    "Teachers": ["Nic"]
+  },
+  {
+    "name": "White Christmas",
+    "image": "assets/images/white-christmas.png",
+    "Teachers": ["Nic"]
+  },
+  {
+    "name": "Cabaret",
+    "image": "assets/images/cabaret.png",
+    "Teachers": ["Nic"]
+  }
 ]
