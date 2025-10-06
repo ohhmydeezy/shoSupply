@@ -7,15 +7,18 @@
 
 section {
   position: relative;
-  width: 60vw;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 2rem 1rem;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2.5em;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
+
 
 .team-profile {
   display: flex;
@@ -26,12 +29,15 @@ section {
 }
 
 .profile-images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; 
-  gap: 15px; 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 15px;
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 2rem;
 }
+
 
 
 .description {
@@ -42,14 +48,18 @@ section {
 }
 
 .img {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 200px;
+  transition: transform 0.5s ease;
+  overflow: hidden;
+  border-radius: 25%;
   cursor: pointer;
-  will-change: width, height;
-  transition: all 0.3s ease;
 }
+
 
 .profile-names {
   width: 100%;
@@ -106,21 +116,23 @@ section {
 
 .info-popup {
   position: fixed;
-  align-items: center;
-  text-align: center;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: rgba(228, 228, 228, 0.8);
   border: 1px solid #ccc;
-  border-radius: 50%;
   padding: 1em;
   width: 25vw;
+  max-width: 400px;
+  max-height: 90vh; 
+  overflow-y: auto; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 9999;
+  text-align: center;
   transition: all 0.3s ease;
   border-radius: 8px;
 }
+
 
 .info-popup img {
   width: auto;
@@ -148,20 +160,16 @@ section {
     flex-direction: column;
   }
 
-  .profile-images {
-    flex-wrap: wrap;
-    max-width: 95%;
-    justify-content: center;
-  }
+.profile-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
 
   .description {
   width: 80vw;
 }
-
-section {
-  height: 100vh;
-}
-
 
   .img {
     width: 100px;
@@ -179,7 +187,20 @@ section {
     height: 10rem;
   }
 
-  .info-popup {
-    width: 50%;
-  }
+.info-popup {
+  width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.info-popup::-webkit-scrollbar {
+  width: 6px;
+}
+
+.info-popup::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 3px;
+}
+
+
 }
