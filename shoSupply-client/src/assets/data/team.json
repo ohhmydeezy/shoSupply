@@ -5,7 +5,7 @@
     "image": "assets/images/shona.png"
   },
   {
-    "name": "Alex",
+    "name": "Alex C",
     "bio": "Alex is a performer and teacher with 10+ years of teaching experience, who trained at ArtsEd. He specialises in teaching acting, including classical and modern text, as well as musical theatre singing, musical theatre dance and drums up to Grade 8. Alex is available for workshops, please view our workshops page. ",
     "image": "assets/images/cardell-fin.png"
   },
@@ -34,9 +34,14 @@
     "bio": "Jessie is a performer and teacher who trained at Emil Dale. She specialises in teaching different genres of dance such as jazz, contemporary, lyrical, commercial and musical theatre. She also loves to teach musical theatre acting, singing and acting through song! Jessie is also available for workshops such as Grease and Mamma Mia! Please see our workshop page on our website for more details. ",
     "image": "assets/images/jessie.png"
   },
-    {
-      "name": "Nic",
-      "bio": "Nic is a graduate of ArtsEd, her stage credits include recently finishing a successful run as 'Meg Brockie' in Brigadoon at Regent's Park Open Air Theatre, 'Kathryn Mertuil' in the first UK tour of Cruel Intentions the 90's musical, 'Judy Haynes' in White Christmas, a year as the Alternate Sally Bowles and swing in Cabaret at the Kit Kat Club, as well as being in the original cast of Back To The Future at the Adelphi. Alongside performing for the past 5 years Nic has enjoyed leading workshops (check out our workshop page) and sessions across the country and sharing her passion for musical theatre. She is thrilled to be working with Sho Supply and looks forward to meeting the next generation of future talent.  ",
-      "image": "assets/images/nic.png"
-    }
+  {
+    "name": "Nic",
+    "bio": "Nic is a graduate of ArtsEd, her stage credits include recently finishing a successful run as 'Meg Brockie' in Brigadoon at Regent's Park Open Air Theatre, 'Kathryn Mertuil' in the first UK tour of Cruel Intentions the 90's musical, 'Judy Haynes' in White Christmas, a year as the Alternate Sally Bowles and swing in Cabaret at the Kit Kat Club, as well as being in the original cast of Back To The Future at the Adelphi. Alongside performing for the past 5 years Nic has enjoyed leading workshops (check out our workshop page) and sessions across the country and sharing her passion for musical theatre. She is thrilled to be working with Sho Supply and looks forward to meeting the next generation of future talent.  ",
+    "image": "assets/images/nic.png"
+  },
+  {
+    "name": "Alex L",
+    "bio": "Alex graduated from the University of Birmingham with a degree in Drama and Theatre Arts. For the last 2 years, she has worked for a company that is dedicated to Teaching in Education. She specialises in teaching acting and dance genres such as jazz, commercial and musical theatre.",
+    "image": "assets/images/alexl.png"
+  }
 ]
