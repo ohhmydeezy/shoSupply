@@ -43,5 +43,10 @@
     "name": "Alex L",
     "bio": "Alex graduated from the University of Birmingham with a degree in Drama and Theatre Arts. For the last 2 years, she has worked for a company that is dedicated to Teaching in Education. She specialises in teaching acting and dance genres such as jazz, commercial and musical theatre.",
     "image": "assets/images/alexl.png"
-  }
+  },
+    {
+      "name": "Nicole-Lily",
+      "bio": "Nicole- Lily is a West End performer and teacher that graduated at ArtsEd. She specialises in teaching singing, acting and dance genres such as jazz, commercial, ballet, tap and musical theatre. Nicole is also available for workshops such as Anything Goes, 42nd Street, Book of Mormon and more!",
+      "image": "assets/images/Nicole-Lily.png"
+    }
 ]

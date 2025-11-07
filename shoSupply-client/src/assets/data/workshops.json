@@ -54,7 +54,7 @@
   {
     "name": "Book of Mormon",
     "image": "assets/images/mormon.png",
-    "Teachers": ["Brian"]
+    "Teachers": ["Brian & Nicole-Lily"]
   },
   {
     "name": "Hairspray",
@@ -74,12 +74,12 @@
   {
     "name": "Young Freankenstein",
     "image": "assets/images/young-frank.png",
-    "Teachers": ["Brian, Shona"]
+    "Teachers": ["Brian & Shona"]
   },
   {
     "name": "42nd Street",
     "image": "assets/images/42ndstreet.png",
-    "Teachers": ["Brian"]
+    "Teachers": ["Brian & Nicole-Lily"]
   },
   {
     "name": "Sweet Charity",
@@ -120,5 +120,10 @@
     "name": "Cabaret",
     "image": "assets/images/cabaret.png",
     "Teachers": ["Nic"]
-  }
+  },
+   {
+     "name": "Anything Goes",
+     "image": "assets/images/anything-goes.png",
+     "Teachers": ["Nicole-Lily"]
+   } 
 ]
