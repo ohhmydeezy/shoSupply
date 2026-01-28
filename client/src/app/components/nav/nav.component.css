@@ -1,0 +1,21 @@
+.nav-button {
+  display: block;
+  font-weight: bold;
+  padding: 0.25rem 0.25rem; 
+  border-radius: 0.125rem;
+  color: rgb(230, 230, 230);
+}
+
+
+.nav-button:hover {
+  color: aqua;
+}
+
+.bar-nav {
+  height: 100px;
+}
+
+
+a {
+  text-decoration: none;
+}

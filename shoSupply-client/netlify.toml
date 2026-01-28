@@ -1,4 +1,0 @@
-[build]
-  command = "npm install && npx ng build --prod"
-  publish = "dist"
-  environment = { NODE_ENV = "production" }

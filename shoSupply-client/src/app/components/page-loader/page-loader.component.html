@@ -1,9 +1,0 @@
-<div *ngIf="loading" class="loader-container">
-  <div *ngIf="message as msg">
-    <div class="loader-message-container">{{ msg }}</div>
-
-    <div *ngIf="progressValue !== null" class="loader-progress-container">
-      <div class="progress-bar" [style.width.%]="progressValue"></div>
-    </div>
-  </div>
-</div>

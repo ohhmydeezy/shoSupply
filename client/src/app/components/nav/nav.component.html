@@ -1,0 +1,65 @@
+<div class="max-w-screen-xl px-4 py-4">
+<div class="flex items-center justify-between h-16">
+  <!-- Logo -->
+  <a href="#" class="flex items-center pl-10 pt-2">
+    <img
+      src="assets/images/shosupply-base.png"
+      class="w-48 h-auto"
+      alt="shoSupply Logo"
+    />
+  </a>
+
+    <!-- Desktop Nav Links (visible on md+) -->
+    <ul
+      class="hidden md:flex space-x-8 font-medium items-center"
+    >
+      <li>
+        <a class="nav-button" [routerLink]="['/About-Us']">About Us</a>
+      </li>
+      <li>
+        <a class="nav-button" [routerLink]="['/Teachers']">Teachers</a>
+      </li>
+      <li>
+        <a class="nav-button" [routerLink]="['/Workshops']">Workshops</a>
+      </li>
+      <li>
+        <a class="nav-button" [routerLink]="['/Contact-Us']">Contact Us</a>
+      </li>
+    </ul>
+
+    <!-- Hamburger Button (visible on < md) -->
+    <button
+      class="text-white md:hidden flex items-center justify-center h-10 w-10"
+      (click)="toggleMenu()"
+    >
+      <i
+        class="fa-solid text-xl transition-transform duration-300 ease-in-out"
+        [ngClass]="menuOpen ? 'fa-xmark rotate-90' : 'fa-bars rotate-0'"
+      ></i>
+    </button>
+  </div>
+
+  <!-- Mobile nav (only visible when menuOpen && small screen) -->
+  <div
+    class="md:hidden transition-all duration-500 ease-in-out"
+    [ngClass]="{
+      'max-h-0 opacity-0 overflow-hidden': !menuOpen,
+      'max-h-96 opacity-100': menuOpen
+    }"
+  >
+    <ul class="flex flex-col p-4 space-y-2 font-medium">
+      <li>
+        <a class="nav-button" [routerLink]="['/About-Us']" (click)="toggleMenu()">About Us</a>
+      </li>
+      <li>
+        <a class="nav-button" [routerLink]="['/Teachers']" (click)="toggleMenu()">Teachers</a>
+      </li>
+      <li>
+        <a class="nav-button" [routerLink]="['/Workshops']" (click)="toggleMenu()">Workshops</a>
+      </li>
+      <li>
+        <a class="nav-button" [routerLink]="['/Contact-Us']" (click)="toggleMenu()">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</div>

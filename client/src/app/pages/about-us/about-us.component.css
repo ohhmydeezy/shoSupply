@@ -1,0 +1,281 @@
+.heading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.heading h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  text-wrap: balance;
+}
+
+.heading p {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  width: 50vw;
+  margin-bottom: 50px;
+}
+
+.mission-section {
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.card-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  margin-bottom: -1rem;
+  z-index: 2;
+}
+
+.color-card {
+  width: 150px;
+  height: 175px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.color-card.peach {
+  background-image: url("/assets/images/teaching-1.png");
+}
+.color-card.mint {
+  background-image: url("/assets/images/aperf.png");
+}
+.color-card.red {
+  background-image: url("/assets/images/clo-dress.jpeg");
+}
+
+.mission-content {
+  background: white;
+  border-top: 20px solid black;
+  padding: 2.5rem;
+
+  width: 100vw;
+  text-align: center;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.mission-content h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.mission-columns {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-around;
+}
+
+.mission-columns p {
+  flex: 1;
+  max-width: 500px;
+  padding-left: 2rem;
+  font-size: 1.15rem;
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-weight: 400;
+  margin: 0;
+  text-align: justify;
+}
+
+.home-buttons {
+  background-color: purple;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 38px;
+  color: white;
+  margin-left: 0;
+}
+
+.description h2 {
+  padding-top: 2rem;
+  color: white;
+  font-size: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+}
+
+.description p {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+
+.slider {
+  background: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #4f46e5;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #4f46e5;
+  cursor: pointer;
+  border: none;
+}
+
+.video-container {
+  position: relative;
+}
+
+.video-controls {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.video-container:hover .video-controls {
+  opacity: 1;
+}
+
+/* Optional: Keep existing slider styling */
+.slider {
+  background: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #4f46e5;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #4f46e5;
+  cursor: pointer;
+  border: none;
+}
+
+/* --- Media Queries for larger screens --- */
+@media (min-width: 768px) {
+  .heading h1 {
+    font-size: 3rem;
+  }
+
+  .heading p {
+    font-size: 1.5rem;
+  }
+
+  .card-row {
+    gap: 3rem;
+  }
+
+  .color-card {
+    width: 250px;
+    height: 290px;
+    flex-wrap: wrap;
+    gap: 50px ;
+  }
+
+  .mission-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .mission-columns {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .mission-columns p {
+    font-size: 1.5rem;
+  }
+
+  .description h2 {
+    padding-top: 5rem;
+    font-size: 3rem;
+  }
+
+  .home-buttons {
+    padding: 1.25rem 2.5rem;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading h1 {
+    font-size: 48px;
+  }
+
+  .heading p {
+    font-size: 24px;
+  }
+
+  .card-row {
+    gap: 60px;
+  }
+
+  .color-card {
+    width: 300px;
+    height: 350px;
+    flex-wrap: wrap;
+  }
+
+  .mission-content h2 {
+    font-size: 36px;
+  }
+
+  .mission-columns {
+    gap: 5px;
+  }
+
+  .mission-columns p {
+    font-size: 28px;
+  }
+
+  .description h2 {
+    font-size: 48px;
+  }
+}
