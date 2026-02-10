@@ -23,14 +23,14 @@ export class AppComponent {
   protected title = 'shoSupply-client';
 
   backgroundClass = 'bg-sho-supply-home';
-  #router = inject(Router);
-  #pageLoaderService = inject(PageLoaderService);
-  #viewportScroller = inject(ViewportScroller);
+  private readonly router = inject(Router);
+  private readonly pageLoaderService = inject(PageLoaderService);
+  private readonly viewportScroller = inject(ViewportScroller);
 
   ngOnInit(): void {
-    this.#router.events.subscribe((event) => {
+    this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
-        this.#pageLoaderService.show('Loading...');
+        this.pageLoaderService.show('Loading...');
       }
 
       if (
@@ -38,12 +38,12 @@ export class AppComponent {
         event instanceof NavigationCancel ||
         event instanceof NavigationError
       ) {
-        this.#pageLoaderService.hide();
+        this.pageLoaderService.hide();
       }
 
       if (event instanceof NavigationEnd) {
         const url = event.urlAfterRedirects;
-        this.#viewportScroller.scrollToPosition([0, 0]);
+        this.viewportScroller.scrollToPosition([0, 0]);
         this.setBackgroundClass(url);
       }
     });
@@ -51,12 +51,12 @@ export class AppComponent {
 
   pageLoad() {
     let progress = 0;
-    this.#pageLoaderService.show('Loading', 0);
+    this.pageLoaderService.show('Loading', 0);
 
     const increment = setInterval(() => {
       progress++;
       if (progress === 100) {
-        this.#pageLoaderService.hide();
+        this.pageLoaderService.hide();
         clearInterval(increment);
       }
       let msg =
@@ -68,8 +68,8 @@ export class AppComponent {
           ? 'Any minute now'
           : 'Almost there';
 
-      this.#pageLoaderService.setMessage(msg);
-      this.#pageLoaderService.setProgressValue(progress);
+      this.pageLoaderService.setMessage(msg);
+      this.pageLoaderService.setProgressValue(progress);
     }, 50);
   }
 
@@ -78,7 +78,7 @@ export class AppComponent {
       case url.includes('/home'):
         this.backgroundClass = 'bg-sho-supply-home';
         break;
-      case url.includes('/About-Us'):
+      case url.includes('/About'):
         this.backgroundClass = 'bg-about-background';
         break;
       case url.includes('/Contact-Us'):

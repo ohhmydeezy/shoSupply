@@ -5,3 +5,18 @@ a {
 a:hover {
     color: aqua;
 }
+
+.animate-in {
+  animation: slide-fade 1s ease-out forwards;
+}
+
+@keyframes slide-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

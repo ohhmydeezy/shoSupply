@@ -57,24 +57,84 @@
 
   <!-- Mission Section -->
   <section class="mission-section overflow-hidden">
-    <div class="card-container">
-      <div class="card-row">
-        <div class="color-card peach"></div>
-        <div class="color-card mint"></div>
-        <div class="color-card red"></div>
+<section>
+  <div class="container mx-auto px-4 mt-5">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-8 text-white text-center">
+      Our Teachers
+    </h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Teacher Card -->
+      <div class="flex flex-col items-center text-center">
+        <img
+          src="assets/images/brian-blue.png"
+          alt=""
+          class="w-full max-w-xs h-auto rounded-3xl"
+        />
+        <p class="text-white text-lg sm:text-xl font-medium mt-6">
+          West End Performers
+        </p>
+      </div>
+
+      <!-- Teacher Card -->
+      <div class="flex flex-col items-center text-center">
+        <img
+          src="assets/images/singing.png"
+          alt=""
+          class="w-full max-w-xs h-auto rounded-3xl"
+        />
+        <p class="text-white text-lg sm:text-xl font-medium mt-6">
+          Drama School Graduates
+        </p>
+      </div>
+
+      <!-- Teacher Card -->
+      <div class="flex flex-col items-center text-center">
+        <img
+          src="assets/images/ateaching.png"
+          alt=""
+          class="w-full max-w-xs h-auto rounded-3xl"
+        />
+        <p class="text-white text-lg sm:text-xl font-medium mt-6">
+          Experienced Teachers
+        </p>
+      </div>
+
+      <!-- Teacher Card -->
+      <div class="flex flex-col items-center text-center">
+        <img
+          src="assets/images/work-creation.png"
+          alt=""
+          class="w-full max-w-xs h-auto rounded-3xl"
+        />
+        <p class="text-white text-lg sm:text-xl font-medium mt-6">
+          Workshop Creators
+        </p>
       </div>
     </div>
+  </div>
+  <div
+    class="buttons flex flex-wrap justify-center gap-4 px-4 pb-3 text-center"
+  >
+    <button class="home-buttons" [routerLink]="['/Teachers']">
+      Learn More
+    </button>
+    <button class="home-buttons" [routerLink]="['/Contact-Us']">
+      Join The Team
+    </button>
+    <button class="home-buttons" [routerLink]="['/Workshops']">
+      Our Workshops
+    </button>
+  </div>
+</section>
 
-    <div class="mission-content">
+    <div class="mission-content container">
       <h2>Our Mission</h2>
-      <div class="mission-columns">
+      <div class="mission-section w-full">
         <p>
           Providing a platform for highly skilled performers and highly
           qualified teachers to share their expertise with the young stars of
-          the future.
-        </p>
-        <p>
-          Supporting performing arts schools with staff at a moment's notice,
+          the future, supporting performing arts schools with staff at a moment's notice,
           who are more than capable of filling a role.
         </p>
         <p>

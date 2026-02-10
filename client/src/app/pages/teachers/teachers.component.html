@@ -4,7 +4,7 @@
       <div class="profile-names">
         <!-- Default heading -->
         <div #name class="name default active items-center">
-          <h1 #nameHeading >Our Team</h1>
+          <h1 #nameHeading>Our Team</h1>
         </div>
         <!-- Teacher names from JSON -->
         <div *ngFor="let teacher of teachers" #name class="name">
@@ -14,39 +14,70 @@
       <div class="description text-center mb-4">
         <p>
           At ShoSupply, all of our teachers have experience in teaching and/or
-          performing professionally. Each teacher holds an enhanced DBS,
-          and some also have additional qualifications, such as music grades and
+          performing professionally. Each teacher holds an enhanced DBS, and
+          some also have additional qualifications, such as music grades and
           dance teaching certifications. We are committed to building a diverse
           and inclusive team.
         </p>
       </div>
+      <section>
+        <div class="team-carousel-container relative">
+          <button
+            (click)="scrollPrev()"
+            class="nav-btn left-btn"
+            aria-label="Scroll Left"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
 
-      <!-- Profile Images -->
-      <div #profileImageContainer class="profile-images">
-        <div
-          class="img rounded-4xl"
-          #profileImage
-          *ngFor="let teacher of teachers; let i = index"
-          (click)="onTeacherClick(i, $event)"
-        >
-          <img [src]="teacher.image" [alt]="teacher.name + ' Headshot'" />
+          <div #profileImageContainer class="profile-images">
+            <div
+              class="img rounded-4xl"
+              #profileImage
+              *ngFor="let teacher of teachers; let i = index"
+              (click)="onTeacherClick(i, $event)"
+            >
+              <img [src]="teacher.image" [alt]="teacher.name + ' Headshot'" />
+            </div>
+          </div>
+
+          <button
+            (click)="scrollNext()"
+            class="nav-btn right-btn"
+            aria-label="Scroll Right"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
         </div>
+      </section>
+
+      <!-- Info Popup -->
+      <div
+        *ngIf="selectedTeacher"
+        class="info-popup"
+        (click)="$event.stopPropagation()"
+      >
+        <button (click)="closePopup()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img [src]="selectedTeacher.image" alt="{{ selectedTeacher.name }}" />
+        <h3>{{ selectedTeacher.name }}</h3>
+        <p>{{ selectedTeacher.bio }}</p>
       </div>
-      <!-- Profile Names -->
     </div>
   </section>
-
-  <!-- Info Popup -->
-  <div
-    *ngIf="selectedTeacher"
-    class="info-popup"
-    (click)="$event.stopPropagation()"
-  >
-    <button (click)="closePopup()">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-    <img [src]="selectedTeacher.image" alt="{{ selectedTeacher.name }}" />
-    <h3>{{ selectedTeacher.name }}</h3>
-    <p>{{ selectedTeacher.bio }}</p>
-  </div>
 </div>

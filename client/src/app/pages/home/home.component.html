@@ -4,27 +4,31 @@
   >
     <div class="hidden md:flex lg:col-span-7 justify-center">
       <div class="lg:col-span-7 flex justify-center">
-        <div class="relative w-[250px] h-[250px]">
+        <div class="img-placeholder relative w-[250px] h-[250px]">
           <img
             src="assets/images/ballet.png"
             alt="Girls dancing in yellow dresses"
-            class="absolute top-28 left-1/2 transform -translate-x-1/2 rounded-full border-4 border-white shadow-lg z-30"
+            class="animate-in absolute top-28 left-1/2 transform -translate-x-1/2 rounded-full border-4 border-white shadow-lg z-30"
           />
           <img
             src="assets/images/hotbox.png"
-            alt="Teacher 2"
-            class="absolute bottom-8 left-20 transform rounded-full border-4 border-white shadow-lg z-20"
+            alt="images from hotbox musical"
+            class="animate-in absolute bottom-8 left-20 transform rounded-full border-4 border-white shadow-lg z-20"
           />
           <img
             src="assets/images/brian-circle.png"
-            alt="Teacher 3"
-            class="absolute bottom-0 right-28 transform rounded-full border-4 border-white shadow-lg z-10"
+            alt="man doing ballet"
+            class="animate-in absolute bottom-0 right-28 transform rounded-full border-4 border-white shadow-lg z-10"
           />
         </div>
       </div>
     </div>
     <div class="lg:col-span-5 lg:flex lg:items-center justify-center">
-      <img src="assets/images/logo.png" alt="shoSupply Logo" />
+      <img
+        src="assets/images/logo.png"
+        alt="shoSupply Logo"
+        class="animate-in"
+      />
     </div>
   </div>
 
@@ -33,96 +37,109 @@
   </div>
 </section>
 
-<section class="pt-20">
-  <div class="container mt-5">
+<section class="pt-20 justify-center">
+  <div class="animate-in container w-full">
     <h1 class="heading">Who Are We?</h1>
-    
-    <p class="description w-full mx-auto">
+
+    <p class="description w-full mx-auto" loading="lazy">
       Sho Supply is a teaching agency for performing arts institutions
       nationwide. We aim to provide talented teachers and performers to schools
       for last-minute cover, planned cover, and workshops. We want to take out
       the stress of finding teachers on short notice and ensure your students
       always have someone to help them learn and improve.
     </p>
-    
+
     <p class="description w-full mx-auto">
       The agency also wants to support performers by giving them opportunities
       to teach on an ad-hoc basis. Allowing them the flexibility to audition and
       perform while making an income at the same time.
     </p>
-    
+
     <p class="description w-full mx-auto">
       Using our knowledge and expertise, we’re able to match the right teacher
       to the right school every time, ensuring smiles all round!
     </p>
-    
-    <button class="home-buttons" routerLink="/About-Us">About Us</button>
-  </div>
-</section>
 
-<section>
-  <div class="container mx-auto px-4 mt-5">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-8 text-white text-center">
-      Our Teachers
-    </h1>
+    <div
+      class="animate-in video-container relative rounded-3xl max-w-3xl aspect-video overflow-hidden shadow-2xl mx-auto my-10"
+    >
+      <!-- Video Section -->
+      <video
+        #video
+        class="w-full h-full object-cover"
+        playsinline
+        preload="metadata"
+        poster="assets/images/video-thumb.jpg"
+        (play)="onVideoPlay()"
+        (pause)="onVideoPause()"
+        (loadedmetadata)="onVideoLoaded($event)"
+        (timeupdate)="onTimeUpdate($event)"
+      >
+        <source src="assets/videos/sho-final.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Teacher Card -->
-      <div class="flex flex-col items-center text-center">
-        <img
-          src="assets/images/brian-blue.png"
-          alt=""
-          class="w-full max-w-xs h-auto rounded-3xl"
-        />
-        <p class="text-white text-lg sm:text-xl font-medium mt-6">
-          West End Performers
-        </p>
-      </div>
+      <!-- Controls Overlay -->
+      <div
+        class="video-controls absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+      >
+        <!-- Timeline -->
+        <div class="mb-3">
+          <input
+            type="range"
+            min="0"
+            [max]="videoDuration()"
+            [value]="currentTime()"
+            (input)="seekVideo($event)"
+            class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer slider"
+          />
+        </div>
 
-      <!-- Teacher Card -->
-      <div class="flex flex-col items-center text-center">
-        <img
-          src="assets/images/singing.png"
-          alt=""
-          class="w-full max-w-xs h-auto rounded-3xl"
-        />
-        <p class="text-white text-lg sm:text-xl font-medium mt-6">
-          Drama School Graduates
-        </p>
-      </div>
+        <!-- Controls Row -->
+        <div class="flex items-center justify-between">
+          <!-- Play/Pause Button with icons -->
+          <button
+            class="bg-white/90 hover:bg-white rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300 hover:scale-110"
+            (click)="toggleVideo()"
+          >
+            <!-- Play Icon -->
+            <svg
+              *ngIf="isVideoPaused"
+              class="w-4 h-4 text-indigo-700 ml-0.5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"
+              />
+            </svg>
 
-      <!-- Teacher Card -->
-      <div class="flex flex-col items-center text-center">
-        <img
-          src="assets/images/ateaching.png"
-          alt=""
-          class="w-full max-w-xs h-auto rounded-3xl"
-        />
-        <p class="text-white text-lg sm:text-xl font-medium mt-6">
-          Experienced Teachers
-        </p>
-      </div>
+            <!-- Pause Icon -->
+            <svg
+              *ngIf="!isVideoPaused"
+              class="w-4 h-4 text-indigo-700"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M5.5 3A1.5 1.5 0 004 4.5v11A1.5 1.5 0 005.5 17h1A1.5 1.5 0 008 15.5v-11A1.5 1.5 0 006.5 3h-1zM13.5 3A1.5 1.5 0 0012 4.5v11a1.5 1.5 0 001.5 1.5h1a1.5 1.5 0 001.5-1.5v-11A1.5 1.5 0 0014.5 3h-1z"
+              />
+            </svg>
+          </button>
 
-      <!-- Teacher Card -->
-      <div class="flex flex-col items-center text-center">
-        <img
-          src="assets/images/work-creation.png"
-          alt=""
-          class="w-full max-w-xs h-auto rounded-3xl"
-        />
-        <p class="text-white text-lg sm:text-xl font-medium mt-6">
-          Workshop Creators
-        </p>
+          <!-- Time Display -->
+          <div class="text-white text-sm font-medium">
+            {{ formatTime(currentTime()) }} /
+            {{ formatTime(videoDuration()) }}
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-<div class="buttons flex flex-wrap justify-center gap-4 px-4 pb-3 text-center">
-  <button class="home-buttons" routerLink="/Teachers">Learn More</button>
-  <button class="home-buttons" routerLink="/Contact-Us">Join The Team</button>
-  <button class="home-buttons" routerLink="/Workshops">Our Workshops</button>
-</div>
 
+    <button class="home-buttons" [routerLink]="['/About']">About Us</button>
+  </div>
 </section>
+
 <section>
   <div class="flex justify-center pt-10">
     <img src="assets/images/arrow1.png" alt="Arrow" class="w-36" />
@@ -333,6 +350,8 @@
     <h3 class="text-2xl font-light pb-8 text-white">
       It's only natural! Contact us, we’d love to hear from you
     </h3>
-    <button class="home-buttons" routerLink="/Contact-Us">Contact Us</button>
+    <button class="home-buttons" [routerLink]="['/Contact-Us']">
+      Contact Us
+    </button>
   </div>
 </section>

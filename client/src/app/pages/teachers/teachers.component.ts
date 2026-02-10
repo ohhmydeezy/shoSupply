@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, OnInit, ViewChildren, ElementRef, QueryList, inject, ChangeDetectorRef } from '@angular/core';
+import { Component, AfterViewInit, OnInit, ViewChild, ViewChildren, ElementRef, QueryList, inject, ChangeDetectorRef } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
@@ -19,6 +19,7 @@ export class TeachersComponent implements OnInit, AfterViewInit {
   private readonly http = inject(HttpClient);
   private readonly cdr = inject(ChangeDetectorRef);
 
+  @ViewChild('profileImageContainer') scrollContainer!: ElementRef;
   @ViewChildren('profileImage') profileImages!: QueryList<ElementRef>;
   @ViewChildren('nameHeading') nameHeadings!: QueryList<ElementRef>;
   @ViewChildren('name') nameElements!: QueryList<ElementRef>;
@@ -147,10 +148,20 @@ export class TeachersComponent implements OnInit, AfterViewInit {
   onTeacherClick(index: number, event: Event) {
     event.stopPropagation();
     this.setActiveName(index + 1);
-    this.selectedTeacher = this.teachers[index]
+    this.selectedTeacher = this.teachers[index];
   }
 
   closePopup() {
     this.selectedTeacher = null;
+  }
+
+  scrollNext() {
+    const el = this.scrollContainer.nativeElement;
+    el.scrollBy({ left: el.offsetWidth, behavior: 'smooth' });
+  }
+
+  scrollPrev() {
+    const el = this.scrollContainer.nativeElement;
+    el.scrollBy({ left: -el.offsetWidth, behavior: 'smooth' });
   }
 }

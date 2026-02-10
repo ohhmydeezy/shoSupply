@@ -1,5 +1,5 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, inject, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, inject, OnInit, QueryList, ViewChildren, ViewChild } from '@angular/core';
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import { CommonModule } from '@angular/common';
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, HttpClientModule],
   templateUrl: './workshops.component.html',
-  styleUrls: ['./workshops.component.css']
+  styleUrls: ['./workshops.component.css'],
 })
 export class WorkshopsComponent implements OnInit, AfterViewInit {
   workshops: any[] = [];
@@ -17,6 +17,7 @@ export class WorkshopsComponent implements OnInit, AfterViewInit {
   private readonly cdr = inject(ChangeDetectorRef);
   selectedWorkshop: any = null;
 
+  @ViewChild('profileImageContainer') scrollContainer!: ElementRef;
   @ViewChildren('profileImage') profileImages!: QueryList<ElementRef>;
   @ViewChildren('nameHeading') nameHeadings!: QueryList<ElementRef>;
   @ViewChildren('name') nameElements!: QueryList<ElementRef>;
@@ -149,5 +150,15 @@ export class WorkshopsComponent implements OnInit, AfterViewInit {
     };
 
     checkAndRun();
+  }
+
+  scrollNext() {
+    const el = this.scrollContainer.nativeElement;
+    el.scrollBy({ left: el.offsetWidth, behavior: 'smooth' });
+  }
+
+  scrollPrev() {
+    const el = this.scrollContainer.nativeElement;
+    el.scrollBy({ left: -el.offsetWidth, behavior: 'smooth' });
   }
 }

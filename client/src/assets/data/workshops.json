@@ -1,129 +1,134 @@
 [
   {
     "name": "Pippen",
-    "image": "assets/images/pippen.png",
+    "image": "assets/images/workshops/pippen.png",
     "Teachers": ["Tanisha"]
   },
   {
     "name": "Chicago",
-    "image": "assets/images/chicago.png",
+    "image": "assets/images/workshops/chicago.png",
     "Teachers": ["Tanisha"]
   },
   {
     "name": "Back To The Future",
-    "image": "assets/images/bttf.png",
+    "image": "assets/images/workshops/bttf.png",
     "Teachers": ["Brian, Nic"]
   },
   {
     "name": "The lion King",
-    "image": "assets/images/tlk.png",
+    "image": "assets/images/workshops/tlk.png",
 
     "Teachers": ["Tanisha"]
   },
   {
     "name": "Winnie The Pooh",
-    "image": "assets/images/winnie.png",
+    "image": "assets/images/workshops/winnie.png",
     "Teachers": ["Alex"]
   },
   {
     "name": "Guys & Dolls",
-    "image": "assets/images/gnd.png",
-    "Teachers": ["Tanisha"]
+    "image": "assets/images/workshops/gnd.png",
+    "Teachers": ["Tanisha, TJ"]
   },
   {
     "name": "Evita",
-    "image": "assets/images/evita.png",
+    "image": "assets/images/workshops/evita.png",
     "Teachers": ["Tanisha, Alex, Shona"]
   },
   {
     "name": "Singing In the Rain",
-    "image": "assets/images/sitr.png",
+    "image": "assets/images/workshops/sitr.png",
     "Teachers": ["Tanisha"]
   },
   {
     "name": "Tina The Musical",
-    "image": "assets/images/tina.png",
+    "image": "assets/images/workshops/tina.png",
     "Teachers": ["Annell"]
   },
   {
     "name": "Mamma Mia",
-    "image": "assets/images/mamma.png",
-    "Teachers": ["Annell, Jessie"]
+    "image": "assets/images/workshops/mamma.png",
+    "Teachers": ["Annell, Jessie, Olivia, Léa"]
   },
 
   {
     "name": "Book of Mormon",
-    "image": "assets/images/mormon.png",
+    "image": "assets/images/workshops/mormon.png",
     "Teachers": ["Brian & Nicole-Lily"]
   },
   {
     "name": "Hairspray",
-    "image": "assets/images/hairspray.png",
+    "image": "assets/images/workshops/hairspray.png",
     "Teachers": ["Brian"]
   },
   {
     "name": "Cats",
-    "image": "assets/images/cats.png",
+    "image": "assets/images/workshops/cats.png",
     "Teachers": ["Brian"]
   },
   {
     "name": "The Producers",
-    "image": "assets/images/producers.png",
+    "image": "assets/images/workshops/producers.png",
     "Teachers": ["Brian"]
   },
   {
     "name": "Young Freankenstein",
-    "image": "assets/images/young-frank.png",
+    "image": "assets/images/workshops/young-frank.png",
     "Teachers": ["Brian & Shona"]
   },
   {
     "name": "42nd Street",
-    "image": "assets/images/42ndstreet.png",
-    "Teachers": ["Brian & Nicole-Lily"]
+    "image": "assets/images/workshops/42ndstreet.png",
+    "Teachers": ["Brian & Nicole-Lily, TJ"]
   },
   {
     "name": "Sweet Charity",
-    "image": "assets/images/sweet-charity.png",
+    "image": "assets/images/workshops/sweet-charity.png",
     "Teachers": ["Alex"]
   },
   {
     "name": "Box Of Delights",
-    "image": "assets/images/boxofdelights.png",
+    "image": "assets/images/workshops/boxofdelights.png",
     "Teachers": ["Alex"]
   },
   {
     "name": "Nativity",
-    "image": "assets/images/nativity.png",
+    "image": "assets/images/workshops/nativity.png",
     "Teachers": ["Shona"]
   },
   {
     "name": "Grease",
-    "image": "assets/images/grease.png",
-    "Teachers": ["Jessie"]
+    "image": "assets/images/workshops/grease.png",
+    "Teachers": ["Jessie, Léa"]
   },
   {
     "name": "Brigadoon",
-    "image": "assets/images/brigadoon.png",
+    "image": "assets/images/workshops/brigadoon.png",
     "Teachers": ["Tanisha, Jessie & Nic"]
   },
   {
     "name": "Cruel Intentions",
-    "image": "assets/images/cruel-intentions.png",
-    "Teachers": ["Nic"]
+    "image": "assets/images/workshops/cruel-intentions.png",
+    "Teachers": ["Nic, Olivia"]
   },
   {
     "name": "White Christmas",
-    "image": "assets/images/white-christmas.png",
+    "image": "assets/images/workshops/white-christmas.png",
     "Teachers": ["Nic"]
   },
   {
     "name": "Cabaret",
-    "image": "assets/images/cabaret.png",
-    "Teachers": ["Nic"]
+    "image": "assets/images/workshops/cabaret.png",
+    "Teachers": ["Nic, Annell, Marie"]
   },
-   {
-     "name": "Anything Goes",
-     "image": "assets/images/anything-goes.png",
-     "Teachers": ["Nicole-Lily"]
-   } 
+  {
+    "name": "Anything Goes",
+    "image": "assets/images/workshops/anything-goes.png",
+    "Teachers": ["Nicole-Lily"]
+  },
+    {
+      "name": "Pretty Woman",
+      "image": "assets/images/workshops/pretty-woman.png",
+      "Teachers": ["Annell, Olivia"]
+    }
 ]

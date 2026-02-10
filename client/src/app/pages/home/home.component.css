@@ -1,40 +1,109 @@
 .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .heading {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: white;
-  }
-  
-  .description {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    color: white;
-  }
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
 
-  .teachers {
-    max-width: 800px;
-   border-radius: 76px ;
-   width: 300px;
-   height: 300px;
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: white;
+}
+
+.teachers {
+  max-width: 800px;
+  border-radius: 76px;
+  width: 300px;
+  height: 300px;
+}
+
+.home-buttons {
+  background-color: purple;
+  padding: 20px;
+  border-radius: 38px;
+  color: white;
+}
+
+.home-buttons:hover {
+  background-color: aqua;
+  color: black;
+}
+
+.video-container {
+  position: relative;
+}
+
+.video-controls {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.video-container:hover .video-controls {
+  opacity: 1;
+}
+
+.slider {
+  background: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #4f46e5;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #4f46e5;
+  cursor: pointer;
+  border: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-
-  .home-buttons {
-    background-color: purple;
-    padding: 20px;
-    border-radius: 38px;
-    color: white;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
-  .home-buttons:hover {
-    background-color: aqua;
-    color: black;
+.animate-in {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0%;
+}
+
+.img-placeholder {
+  background-color: #f947f9b7;
+}
+
+.enter-animation {
+  animation: slide-fade 1s;
+}
+@keyframes slide-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-
-  
-
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

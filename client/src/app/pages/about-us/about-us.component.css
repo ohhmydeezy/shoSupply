@@ -73,13 +73,9 @@
 }
 
 .mission-content {
-  background: white;
-  border-top: 20px solid black;
   padding: 2.5rem;
-
   width: 100vw;
   text-align: center;
-  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
 
@@ -87,16 +83,14 @@
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 2rem;
-  color: black;
+  color: white;
   margin-bottom: 2rem;
 }
 
-.mission-columns {
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-  text-align: left;
-  justify-content: space-around;
+.mission-section p {
+  color: #efefef;
+  font-size: x-large;
+  font-weight: 500;
 }
 
 .mission-columns p {
@@ -105,7 +99,7 @@
   padding-left: 2rem;
   font-size: 1.15rem;
   font-family: "Inter", sans-serif;
-  color: black;
+  color: white;
   font-weight: 400;
   margin: 0;
   text-align: justify;
@@ -174,7 +168,6 @@
   opacity: 1;
 }
 
-/* Optional: Keep existing slider styling */
 .slider {
   background: rgba(255, 255, 255, 0.3);
   outline: none;
