@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PageLoader } from './page-loader';
+import { PageLoaderService } from './page-loader';
 
 describe('PageLoader', () => {
-  let service: PageLoader;
+  let service: PageLoaderService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(PageLoader);
+    service = TestBed.inject(PageLoaderService);
   });
 
   it('should be created', () => {

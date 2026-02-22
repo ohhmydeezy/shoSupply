@@ -119,16 +119,26 @@
   {
     "name": "Cabaret",
     "image": "assets/images/workshops/cabaret.png",
-    "Teachers": ["Nic, Annell, Marie"]
+    "Teachers": ["Nic, Anne-Marie"]
   },
   {
     "name": "Anything Goes",
     "image": "assets/images/workshops/anything-goes.png",
     "Teachers": ["Nicole-Lily"]
   },
+  {
+    "name": "Pretty Woman",
+    "image": "assets/images/workshops/pretty-woman.png",
+    "Teachers": ["Annell, Olivia"]
+  },
+  {
+    "name": "Annie",
+    "image": "assets/images/workshops/annie.png",
+    "Teachers": ["Tanisha"]
+  },
     {
-      "name": "Pretty Woman",
-      "image": "assets/images/workshops/pretty-woman.png",
-      "Teachers": ["Annell, Olivia"]
+      "name": "Mean Girls",
+      "image": "assets/images/workshops/mean-girls.png",
+      "Teachers": ["Jessie"]
     }
 ]
