@@ -5,11 +5,6 @@
     "image": "assets/images/headshots/shona.png"
   },
   {
-    "name": "Alex C",
-    "bio": "Alex is a performer and teacher with 10+ years of teaching experience, who trained at ArtsEd. He specialises in teaching acting, including classical and modern text, as well as musical theatre singing, musical theatre dance and drums up to Grade 8. Alex is available for workshops, please view our workshops page. ",
-    "image": "assets/images/headshots/cardell-fin.png"
-  },
-  {
     "name": "Tanisha",
     "bio": "Tanisha is a performer and teacher who trained at ArtsEd. She specialises in teaching jazz, hip hop, tap, commercial and muscial theatre dance as well as singing styles such as pop, R&B, Rock, legit and musical theatre. Tanisha is available for workshops, please view our workshops page.  ",
     "image": "assets/images/headshots/tanisha.png"
@@ -58,6 +53,11 @@
     "name": "Joe",
     "bio": "Joe is a performer  and teacher ready to teach all three disciplines! He has preformed in many UK tours and specialises in teaching musical theatre, acting, singing and dance! Check our workshop page to book Joe for a show workshop soon! ",
     "image": "assets/images/headshots/joe.png"
+  },
+  {
+    "name": "Alex C",
+    "bio": "Alex is a performer and teacher with 10+ years of teaching experience, who trained at ArtsEd. He specialises in teaching acting, including classical and modern text, as well as musical theatre singing, musical theatre dance and drums up to Grade 8. Alex is available for workshops, please view our workshops page. ",
+    "image": "assets/images/headshots/cardell-fin.png"
   },
   {
     "name": "Léa",

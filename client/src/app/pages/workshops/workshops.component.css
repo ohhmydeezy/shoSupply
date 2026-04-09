@@ -52,13 +52,10 @@ section {
   height: 24px;
 }
 
-.left-btn {
-  left: 0;
-}
-.right-btn {
-  right: 0;
-}
+.left-btn { left: 0; }
+.right-btn { right: 0; }
 
+/* ── Grid: 4 columns desktop ── */
 .profile-images {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
@@ -77,12 +74,7 @@ section {
 }
 
 .profile-images::-webkit-scrollbar {
-  height: 6px;
-}
-
-.profile-images::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
+  display: none;
 }
 
 .img {
@@ -97,6 +89,10 @@ section {
   border-radius: 25%;
   cursor: pointer;
   scroll-snap-align: start;
+}
+
+.img:hover {
+  transform: scale(1.05);
 }
 
 .profile-names {
@@ -152,9 +148,9 @@ section {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(228, 228, 228, 0.6);
+  background: rgba(105, 135, 255, 0.9);
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 20px;
   padding: 1em;
   width: 25vw;
   max-width: 400px;
@@ -176,41 +172,95 @@ section {
   margin-top: 0.5em;
   font-weight: 700;
   font-size: 1.25rem;
+  color: #dedede;
 }
 
 .info-popup p {
   font-size: 0.9em;
   font-weight: 500;
-  color: #444;
+  color: #dedede;
 }
 
+/* ── Tablet: 2 columns ── */
 @media (max-width: 900px) {
-  section {
-    flex-direction: column;
-  }
-
   .profile-images {
-    flex-wrap: wrap;
-    max-width: 95%;
-    justify-content: center;
+    grid-auto-columns: calc(50% - 8px);
+    padding-left: 40px;
+    scroll-padding-left: 40px;
+    gap: 10px;
   }
 
   .img {
-    width: 50vw;
-    height: 50vw;
-    padding: 2.5px;
+    max-width: 160px;
   }
 
   .profile-names {
-    height: 5rem;
+    height: 7rem;
   }
 
-  .name h1 {
-    font-size: 2rem;
-    letter-spacing: 2px;
+  .nav-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-btn svg {
+    width: 18px;
+    height: 18px;
   }
 
   .info-popup {
-    width: 80vw;
+    width: 60vw;
+  }
+}
+
+/* ── Mobile: 1 column ── */
+@media (max-width: 480px) {
+  section {
+    gap: 1.5em;
+  }
+
+  .profile-images {
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-columns: calc(100% - 60px);
+    padding-left: 30px;
+    scroll-padding-left: 20px;
+    gap: 8px;
+    margin-top: 1rem;
+  }
+
+  .img {
+    max-width: 50vw;
+  }
+
+  .profile-names {
+    height: 15vh;
+  }
+
+  .name h1 {
+    letter-spacing: -0.1rem;
+  }
+
+  .nav-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .info-popup {
+    width: 90vw;
+    top: 50%;
+    padding: 0.75em;
+  }
+
+  .info-popup h3 {
+    font-size: 1rem;
+  }
+
+  .info-popup p {
+    font-size: 0.8em;
   }
 }

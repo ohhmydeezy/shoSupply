@@ -6,7 +6,6 @@
         <div #name class="name default active items-center">
           <h1 #nameHeading>Our Team</h1>
         </div>
-        <!-- Teacher names from JSON -->
         <div *ngFor="let teacher of teachers" #name class="name">
           <h1 #nameHeading>{{ teacher.name }}</h1>
         </div>
