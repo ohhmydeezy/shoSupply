@@ -5,6 +5,13 @@
   color: white;
 }
 
+.send-button:disabled {
+  background-color: darkblue;
+  padding: 10px;
+  border-radius: 38px;
+  color: white;
+}
+
 .contact-form {
   background-color: white;
 }

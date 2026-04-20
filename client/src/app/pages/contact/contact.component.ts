@@ -23,6 +23,7 @@ export class ContactComponent implements OnInit {
     this.FormData = this.builder.group({
       Name: ['', Validators.required],
       Email: ['', [Validators.required, Validators.email]],
+      subject: ['', [Validators.required]],
       Message: ['', Validators.required],
     });
   }
