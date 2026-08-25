@@ -87,6 +87,14 @@
   margin-bottom: 2rem;
 }
 
+.review-content h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
 .mission-section p {
   color: #efefef;
   font-size: x-large;

@@ -60,96 +60,144 @@
       to the right school every time, ensuring smiles all round!
     </p>
 
-    <div
-      class="animate-in video-container relative rounded-3xl max-w-3xl aspect-video overflow-hidden shadow-2xl mx-auto my-10"
-    >
-      <!-- Video Section -->
-      <video
-        #video
-        class="w-full h-full object-cover"
-        playsinline
-        preload="metadata"
-        poster="assets/images/video-thumb.jpg"
-        (play)="onVideoPlay()"
-        (pause)="onVideoPause()"
-        (loadedmetadata)="onVideoLoaded($event)"
-        (timeupdate)="onTimeUpdate($event)"
-      >
-        <source src="assets/videos/sho-final.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <!-- Controls Overlay -->
+    <!-- Video and Team Section -->
+    <section class="flex items-center justify-center px-10 py-16">
       <div
-        class="video-controls absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+        class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
       >
-        <!-- Timeline -->
-        <div class="mb-3">
-          <input
-            type="range"
-            min="0"
-            [max]="videoDuration()"
-            [value]="currentTime()"
-            (input)="seekVideo($event)"
-            class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer slider"
-          />
+        <!-- Left Section - How we work with clients -->
+        <div class="flex flex-col gap-8 text-center lg:text-left">
+          <h2 class="text-white text-4xl lg:text-5xl font-light leading-tight">
+            How we work with our clients
+          </h2>
+
+          <!-- Video Container - centered in this section -->
+          <div class="flex justify-center lg:justify-start">
+            <div
+              class="video-container relative rounded-3xl w-full max-w-md aspect-video flex items-center justify-center overflow-hidden shadow-2xl"
+            >
+              <!-- Video Section -->
+              <video
+                #video
+                class="w-full h-full object-cover"
+                playsinline
+                preload="metadata"
+                poster="assets/images/video-thumb.jpg"
+                (play)="onVideoPlay()"
+                (pause)="onVideoPause()"
+                (loadedmetadata)="onVideoLoaded($event)"
+                (timeupdate)="onTimeUpdate($event)"
+              >
+                <source src="assets/videos/sho-final.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+
+              <!-- Controls Overlay -->
+              <div
+                class="video-controls absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+              >
+                <!-- Timeline -->
+                <div class="mb-3">
+                  <input
+                    type="range"
+                    min="0"
+                    [max]="videoDuration"
+                    [value]="currentTime"
+                    (input)="seekVideo($event)"
+                    class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer slider"
+                  />
+                </div>
+
+                <!-- Controls Row -->
+                <div class="flex items-center justify-between">
+                  <!-- Play/Pause Button with icons -->
+                  <button
+                    class="bg-white/90 hover:bg-white rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                    (click)="toggleVideo()"
+                  >
+                    <!-- Play Icon -->
+                    <svg
+                      *ngIf="isVideoPaused"
+                      class="w-4 h-4 text-indigo-700 ml-0.5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"
+                      />
+                    </svg>
+
+                    <!-- Pause Icon -->
+                    <svg
+                      *ngIf="!isVideoPaused"
+                      class="w-4 h-4 text-indigo-700"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M5.5 3A1.5 1.5 0 004 4.5v11A1.5 1.5 0 005.5 17h1A1.5 1.5 0 008 15.5v-11A1.5 1.5 0 006.5 3h-1zM13.5 3A1.5 1.5 0 0012 4.5v11a1.5 1.5 0 001.5 1.5h1a1.5 1.5 0 001.5-1.5v-11A1.5 1.5 0 0014.5 3h-1z"
+                      />
+                    </svg>
+                  </button>
+
+                  <!-- Time Display -->
+                  <div class="text-white text-sm font-medium">
+                    {{ formatTime(currentTime) }} /
+                    {{ formatTime(videoDuration) }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Controls Row -->
-        <div class="flex items-center justify-between">
-          <!-- Play/Pause Button with icons -->
-          <button
-            class="bg-white/90 hover:bg-white rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300 hover:scale-110"
-            (click)="toggleVideo()"
+        <!-- Right Section - Video and Team -->
+        <div class="flex flex-col items-center gap-8">
+          <div
+            class="text-white text-lg leading-relaxed opacity-90 text-center"
           >
-            <!-- Play Icon -->
-            <svg
-              *ngIf="isVideoPaused"
-              class="w-4 h-4 text-indigo-700 ml-0.5"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"
-              />
-            </svg>
+            <p>
+              Please watch a video from some of our teachers, to help you
+              understand how Sho Supply can help you today! Whether you are a
+              school director, teacher or performer.
+            </p>
+          </div>
 
-            <!-- Pause Icon -->
-            <svg
-              *ngIf="!isVideoPaused"
-              class="w-4 h-4 text-indigo-700"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M5.5 3A1.5 1.5 0 004 4.5v11A1.5 1.5 0 005.5 17h1A1.5 1.5 0 008 15.5v-11A1.5 1.5 0 006.5 3h-1zM13.5 3A1.5 1.5 0 0012 4.5v11a1.5 1.5 0 001.5 1.5h1a1.5 1.5 0 001.5-1.5v-11A1.5 1.5 0 0014.5 3h-1z"
-              />
-            </svg>
-          </button>
-
-          <!-- Time Display -->
-          <div class="text-white text-sm font-medium">
-            {{ formatTime(currentTime()) }} /
-            {{ formatTime(videoDuration()) }}
+          <div class="text-center text-white items-center">
+            <p class="text-lg leading-relaxed opacity-90 mb-8">
+              Click the button below to enquire about joining our team as a
+              teacher or school!
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 m-2">
+              <button
+                class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 z-10"
+                routerLink="/Teachers"
+              >
+                Meet The Team
+              </button>
+              <button
+                class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                routerLink="/Contact-Us"
+              >
+                Contact Us
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <button class="home-buttons" [routerLink]="['/About']">About Us</button>
+    </section>
   </div>
 </section>
 
 <section>
+  <div class="text-center mb-10">
+    <h2 class="text-3xl font-bold text-white">How to Join Us?</h2>
+  </div>
   <div class="flex justify-center pt-10">
     <img src="assets/images/arrow1.png" alt="Arrow" class="w-36" />
   </div>
 </section>
 <section class="py-12">
-  <div class="text-center mb-10">
-    <h2 class="text-3xl font-bold text-white">How to Join Us?</h2>
-  </div>
-
   <div class="flex flex-wrap justify-center gap-16 px-4">
     <!-- Card -->
     <div class="relative w-[286px] h-[348px]">
@@ -198,6 +246,9 @@
         <span class="text-lg font-medium"
           >Learn more about us by exploring our website</span
         >
+        <button class="home-buttons mt-4" [routerLink]="['/About']">
+          About Us
+        </button>
       </div>
     </div>
     <div class="relative w-[286px] h-[348px]">
@@ -246,54 +297,9 @@
         <span class="text-lg font-medium"
           >Get in touch with us if you have any questions</span
         >
-      </div>
-    </div>
-    <div class="relative w-[286px] h-[348px]">
-      <!-- Black shadow box -->
-      <svg
-        class="absolute top-2 left-2 z-0"
-        width="286"
-        height="348"
-        viewBox="0 0 286 348"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="286" height="348" rx="44" fill="black" />
-      </svg>
-
-      <!-- White card on top -->
-      <svg
-        class="relative z-10"
-        width="274"
-        height="336"
-        viewBox="0 0 274 336"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="274" height="336" rx="40" fill="white" />
-      </svg>
-
-      <!-- Icon and text -->
-      <div
-        class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4"
-      >
-        <!-- Replace with your actual SVG icon -->
-        <svg
-          width="72"
-          height="72"
-          viewBox="0 0 72 72"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="mb-4"
-        >
-          <path
-            d="M38.75 10.3333C36.0094 10.3333 33.3811 11.4219 31.4432 13.3598C29.5053 15.2977 28.4166 17.926 28.4166 20.6666C28.4166 23.4072 29.5053 26.0355 31.4432 27.9734C33.3811 29.9112 36.0094 30.9999 38.75 30.9999C41.4906 30.9999 44.1189 29.9112 46.0568 27.9734C47.9946 26.0355 49.0833 23.4072 49.0833 20.6666C49.0833 17.926 47.9946 15.2977 46.0568 13.3598C44.1189 11.4219 41.4906 10.3333 38.75 10.3333ZM38.75 15.2416C39.4624 15.2416 40.1679 15.3819 40.826 15.6545C41.4842 15.9272 42.0823 16.3268 42.586 16.8305C43.0898 17.3343 43.4894 17.9323 43.762 18.5905C44.0347 19.2487 44.175 19.9542 44.175 20.6666C44.175 21.379 44.0347 22.0845 43.762 22.7426C43.4894 23.4008 43.0898 23.9989 42.586 24.5026C42.0823 25.0064 41.4842 25.406 40.826 25.6786C40.1679 25.9513 39.4624 26.0916 38.75 26.0916C38.0376 26.0916 37.3321 25.9513 36.6739 25.6786C36.0157 25.406 35.4177 25.0064 34.9139 24.5026C34.4102 23.9989 34.0106 23.4008 33.7379 22.7426C33.4653 22.0845 33.325 21.379 33.325 20.6666C33.325 19.2278 33.8965 17.8479 34.9139 16.8305C35.9313 15.8131 37.3112 15.2416 38.75 15.2416ZM10.3333 18.0833V25.8333H2.58331V30.9999H10.3333V38.7499H15.5V30.9999H23.25V25.8333H15.5V18.0833H10.3333ZM38.75 33.5833C31.8525 33.5833 18.0833 37.0191 18.0833 43.9166V51.6666H59.4166V43.9166C59.4166 37.0191 45.6475 33.5833 38.75 33.5833ZM38.75 38.4916C46.4225 38.4916 54.5083 42.2633 54.5083 43.9166V46.7583H22.9916V43.9166C22.9916 42.2633 31 38.4916 38.75 38.4916Z"
-            fill="black"
-          />
-        </svg>
-        <span class="text-lg font-medium"
-          >Register your interest to join us</span
-        >
+        <button class="home-buttons mt-4" [routerLink]="['/Contact-Us']">
+          Contact Us
+        </button>
       </div>
     </div>
     <div class="relative w-[286px] h-[348px]">
@@ -341,17 +347,5 @@
         >
       </div>
     </div>
-  </div>
-</section>
-
-<section class="pb-5">
-  <div class="flex flex-col items-center text-center">
-    <h2 class="text-4xl font-semibold text-white">Have More Questions?</h2>
-    <h3 class="text-2xl font-light pb-8 text-white">
-      It's only natural! Contact us, we’d love to hear from you
-    </h3>
-    <button class="home-buttons" [routerLink]="['/Contact-Us']">
-      Contact Us
-    </button>
   </div>
 </section>

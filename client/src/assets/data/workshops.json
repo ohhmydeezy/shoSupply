@@ -1,5 +1,45 @@
 [
   {
+    "name": "Mamma Mia",
+    "image": "assets/images/workshops/mamma.png",
+    "Teachers": ["Annell, Jessie, Olivia, Léa"]
+  },
+  {
+    "name": "The lion King",
+    "image": "assets/images/workshops/tlk.png",
+    "Teachers": ["Tanisha"]
+  },
+  {
+    "name": "Stranger Things",
+    "image": "assets/images/workshops/stranger.png",
+    "Teachers": ["Lauren"]
+  },
+  {
+    "name": "Mean Girls",
+    "image": "assets/images/workshops/mean-girls.png",
+    "Teachers": ["Jessie"]
+  },
+  {
+    "name": "Annie",
+    "image": "assets/images/workshops/annie.png",
+    "Teachers": ["Tanisha"]
+  },
+  {
+    "name": "Cats",
+    "image": "assets/images/workshops/cats.png",
+    "Teachers": ["Brian"]
+  },
+  {
+    "name": "Back To The Future",
+    "image": "assets/images/workshops/bttf.png",
+    "Teachers": ["Brian, Nic"]
+  },
+  {
+    "name": "Hairspray",
+    "image": "assets/images/workshops/hairspray.png",
+    "Teachers": ["Brian"]
+  },
+  {
     "name": "Pippen",
     "image": "assets/images/workshops/pippen.png",
     "Teachers": ["Tanisha"]
@@ -9,17 +49,7 @@
     "image": "assets/images/workshops/chicago.png",
     "Teachers": ["Tanisha"]
   },
-  {
-    "name": "Back To The Future",
-    "image": "assets/images/workshops/bttf.png",
-    "Teachers": ["Brian, Nic"]
-  },
-  {
-    "name": "The lion King",
-    "image": "assets/images/workshops/tlk.png",
 
-    "Teachers": ["Tanisha"]
-  },
   {
     "name": "Winnie The Pooh",
     "image": "assets/images/workshops/winnie.png",
@@ -46,26 +76,11 @@
     "Teachers": ["Annell"]
   },
   {
-    "name": "Mamma Mia",
-    "image": "assets/images/workshops/mamma.png",
-    "Teachers": ["Annell, Jessie, Olivia, Léa"]
-  },
-
-  {
     "name": "Book of Mormon",
     "image": "assets/images/workshops/mormon.png",
     "Teachers": ["Brian & Nicole-Lily"]
   },
-  {
-    "name": "Hairspray",
-    "image": "assets/images/workshops/hairspray.png",
-    "Teachers": ["Brian"]
-  },
-  {
-    "name": "Cats",
-    "image": "assets/images/workshops/cats.png",
-    "Teachers": ["Brian"]
-  },
+
   {
     "name": "The Producers",
     "image": "assets/images/workshops/producers.png",
@@ -130,15 +145,5 @@
     "name": "Pretty Woman",
     "image": "assets/images/workshops/pretty-woman.png",
     "Teachers": ["Annell, Olivia"]
-  },
-  {
-    "name": "Annie",
-    "image": "assets/images/workshops/annie.png",
-    "Teachers": ["Tanisha"]
-  },
-    {
-      "name": "Mean Girls",
-      "image": "assets/images/workshops/mean-girls.png",
-      "Teachers": ["Jessie"]
-    }
+  }
 ]

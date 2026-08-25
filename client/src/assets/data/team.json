@@ -88,5 +88,45 @@
     "name": "Olivia",
     "bio": "Olivia is a west end performer who has stared in musicals such as Mamma Mia, Pretty Women and Cruel Intentions. She specialises in teaching acting through song, acting and singing classes as well as musical theatre and jazz dance classes in both London and the Midlands! Head to our workshop page for more information about your next workshop with Olivia!",
     "image": "assets/images/headshots/olivia.png"
-  }
+  },
+  {
+    "name": "Mabli",
+    "bio": "",
+    "image": "assets/images/headshots/mabli.png"
+  },
+  {
+    "name": "Anastasia",
+    "bio": "",
+    "image": "assets/images/headshots/Anastasia.png"
+  },
+  {
+    "name": "Zara",
+    "bio": "",
+    "image": "assets/images/headshots/zara.png"
+  },
+  {
+    "name": "Lauren",
+    "bio": "",
+    "image": "assets/images/headshots/lauren.png"
+  },
+  {
+    "name": "Hannah",
+    "bio": "",
+    "image": "assets/images/headshots/hannah.png"
+  },
+  {
+    "name": "Lucy",
+    "bio": "",
+    "image": "assets/images/headshots/lucy.png"
+  },
+  {
+    "name": "Phoebe",
+    "bio": "",
+    "image": "assets/images/headshots/phoebe.png"
+  },
+    {
+      "name": "Tiegan",
+      "bio": "",
+      "image": "assets/images/headshots/tiegan.png"
+    }
 ]
