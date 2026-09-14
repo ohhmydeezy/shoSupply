@@ -39,6 +39,21 @@
     "image": "assets/images/workshops/hairspray.png",
     "Teachers": ["Brian"]
   },
+    {
+    "name": "Hercules",
+    "image": "assets/images/workshops/hercules.png",
+    "Teachers": [""]
+  },
+  {
+    "name": "The Greatest Showman",
+    "image": "assets/images/workshops/greatest-showman.png",
+    "Teachers": [""]
+  },
+  {
+    "name": "Kinky Boots",
+    "image": "assets/images/workshops/kinky.png",
+    "Teachers": ["Annell"]
+  },
   {
     "name": "Pippen",
     "image": "assets/images/workshops/pippen.png",
